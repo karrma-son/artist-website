@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-size: 10px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-size: 21px;
+  line-height: 69px;
+  font-weight: 900;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+}
+header {
+  display: flex;
+  justify-content:space-around;
+  text-align:center ;
+  font-size: 25px;
+  background-color: #261c30;
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.9);
+  text-shadow: -1px -1px 0 #ee00dc, 1px -1px 0 #00997d, -1px -1px 0 #00bb76, -1px -2px 0 #00bb76;
+}
+/* header:hover */
+
+.header1{
+  border-radius: 50px;
+  background-color: hsla(0, 0%, 0%, 0.855);
+}
+
+h1 {
+line-height:90px;
+height: 90px;
+width: 90px;
+border-radius: 50%; 
+text-align: center;
+color:rgb(61, 0, 130);
+border: #222;
+text-shadow: -1px 1px 0 #ee00dc, 2px -1px 0 #00997d, -1px 1px 0 #00bb76, -1px -1px 0 #00bb76;
+}
+
+h1:hover {
+text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
+
+
+}
+
+
+ h2{
+  text-align: center;
+  font-size: 40px;
+  height: 60px;
+  /*background: none; */
+ }
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center ;
+  padding: 1rem;
+  gap: 3rem;
+}
+.art-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 1rem;
+  height: 250px;
+  width: 340px;
+  margin-top: 1px;
+  flex: 0 1 auto;
+  overflow-x:hidden;
+  
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
+ 
+  
+}
+.art-card:hover {
+  transform: scale(1.15);
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(205, 170, 238, 0.702);
+  transition: transform 0.2s, background-color 0.2s;
+
+}
+
+.art-card h3 {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.111em;
+  font-weight: 900;
+  font-style: normal;
+  margin: 0.5rem 0 0.25rem;
+  margin-top: -6px;
+  margin-bottom: 5px;
+}
+
+.art-card img {
+
+  width: 100%;
+  object-fit: scale-down;
+  height: 90%;
+  margin-top: 1px;
+}
+
+.art-card img:hover {
+   height: 90%;
+}
+.art-card p {
+  line-height: 13px;
+  letter-spacing: -0.052em;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0.25rem 0;
+}
+.art-card button {
+  display: inline-block;
+  height: 30px;
+  line-height: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #a474d4da;
+  color: #84d474da;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.art-card button:hover {
+  color:#261c30;;
+  background-color: #84d474da;
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
+}
+.art-card button:active {
+  background-color: rgb(215, 236, 215);
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
+}
+.thank-you {
+  display: none;
+  color: #0f0;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+.price {
+  color: #0f0;
+}
+
+.art-cart button {
+  display: inline-block;
+  height: 30px;
+  line-height: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #a474d4da;
+  color: #84d474da;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.art-cart button:hover {
+  color:#261c30;;
+  background-color: #84d474da;
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
+}
+
+.art-cart button:active {
+  background-color: rgb(215, 236, 215);
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
+}
+
+
+
+
+ base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    border: 0 solid; 
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    border-radius: 0; 
+    background-color: transparent; 
+    color: rgba(105, 206, 255, 0.439);
+    border-radius: 12px;
+  }
+}
