@@ -7,7 +7,6 @@ import {onePaintings, twoPaintings, threePaintings} from './Art/Acrylic on Canva
 const GalleryPage = () => {
   return (
     <div>
-      <h1>Gallery </h1>
       <h2>2020</h2>
       <ArtCardGrid artData={onePaintings} />
       <h2>2021</h2>

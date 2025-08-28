@@ -217,4 +217,18 @@ const threePaintings = [
   },
 
 ]
-export {onePaintings, twoPaintings, threePaintings}
+
+const homePainting =
+[
+  {
+    id: 1,
+    title: 'Rite de Passage',
+    size:   '16" x20"',
+    price: 1100,
+    image: '/images/2022-Rite de Passage_.jpg',
+    medium: 'Acrylic on canvas',
+    category:'painting'
+  }
+  
+]
+export {onePaintings, twoPaintings, threePaintings, homePainting}

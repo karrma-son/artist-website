@@ -28,7 +28,7 @@ header {
   justify-content:space-around;
   text-align:center ;
   font-size: 95%;
-  background-color: #261c30;
+  background-color: rgb(38, 28, 48);
   box-shadow: 0 0 10px rgba(238, 232, 170, 0.9);
   text-shadow: -1px -1px 0 #ee00dc, 1px -1px 0 #00997d, -1px -1px 0 #00bb76, -1px -2px 0 #00bb76;
 }
@@ -65,10 +65,22 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
  h2{
   text-align: center;
   font-size: 40px;
-  height: 60px;
-  /*background: none; */
+  height: 65px; 
+  line-height:80px ;
+  background-image: linear-gradient(to top, rgb(109, 80, 138), rgba(205, 170, 238, 0.702 ));
+  color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
  }
 
+ 
+ h3{
+  line-height: 3px;
+  text-align: center;
+  font-size: 12px;
+  height: 20px;
+  /*background: none; */
+ }
 
 .gallery {
   display: flex;
@@ -79,29 +91,28 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
   gap: 3rem;
 }
 .art-card {
+  flex: 0 1 auto;
   background-color: #222;
   border-radius: 10px;
   padding: 1rem;
   height: 250px;
-  width: 340px;
+  width: 240px;
   margin-top: 1px;
-  flex: 0 1 auto;
   overflow-x:hidden;
-  
   box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
  
   
 }
 .art-card:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   background-color: #333;
   box-shadow: 0 0 10px rgba(205, 170, 238, 0.702);
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform .4s, background-color 0.2s;
 
 }
 
 .art-card h3 {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 30px;
   letter-spacing: 0.111em;
   font-weight: 900;
@@ -112,11 +123,11 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
 }
 
 .art-card img {
-
-  width: 100%;
+  margin: auto;
+  width: 80%;
+  height: 80%;
   object-fit: scale-down;
-  height: 90%;
-  margin-top: 1px;
+  margin-top: 10px;
 }
 
 .art-card img:hover {
@@ -185,19 +196,19 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
   box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
 }
 
-.SubmissionForm {
+.submissionForm {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background-color: #fff;
-    border-radius: 15px;
+    background-color: #222;
+    border-radius: 10%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
+    padding: 10px 30px;
     transition: transform 0.2s;
-    width: 500px;
+    width: 400px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 

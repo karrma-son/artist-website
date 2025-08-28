@@ -26,10 +26,10 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
   return (
     <section className="gallery">
       {artData.map((art) => (
-        <div className="art-card" key={art.id}>
+        <div className=" bg-gradient-to-b from-gray-700 to-gray-900 art-card" key={art.id}>
           <div onClick={() => setSelectedArt(art)} className="cursor-pointer">
             <h3>{art.title}</h3>
-            <img src={art.image} alt={art.title} />
+            <img className='border-2 border-indigo-950' src={art.image} alt={art.title} />
           </div>
           <p>{art.medium}</p>
           <p>{art.size}</p>
@@ -49,13 +49,14 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
       <Modal isOpen={!!selectedArt} onClose={() => setSelectedArt(null)}>
         {selectedArt && (
           <div className="text-center">
-            <h2 className="text-xl font-bold mb-4">{selectedArt.title}</h2>
+
             <img
               src={selectedArt.image}
               alt={selectedArt.title}
               onClick={() => handleImageClick(selectedArt.image)} 
               className="max-h-[70vh] mx-auto rounded-lg"
             />
+            <h2 className="text-xl font-bold mb-4">{selectedArt.title}</h2>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
               {selectedArt.description || 'No description available.'}
             </p>

@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom'
 import ArtCardGrid from '../components/ArtCardGrid'
-import {twoPaintings} from './Art/Acrylic on Canvas'
+import {homePainting} from './Art/Acrylic on Canvas'
+import {homeDesign} from './Art/Design'
 import SubmissionForm from '../components/SubmissionForm'
 
 export default function Home() {
@@ -7,11 +9,19 @@ export default function Home() {
     <div>
       <br />
       <div>
-        <h2>Welcome</h2>
-        <h3>to</h3>
-      <h3>Mason Karr's Gallery</h3>
-      <p>Explore original works of art — painting, design, illustration, and more.</p>
-      <ArtCardGrid artData={twoPaintings} />
+        <h3>Welcome</h3>
+        <h3>to the</h3>
+         <h3>online gallery</h3>
+         <h3> of</h3>
+        <h2>Mason Karr</h2>
+     <br />
+      <Link to="/art/Paintings">
+      <ArtCardGrid artData={homePainting} />
+      </Link>
+      <Link to="/art/Design">
+      <ArtCardGrid artData={homeDesign} />
+      </Link>
+       <p>Explore original works of art — painting, design, illustration, and more.</p>
       <SubmissionForm></SubmissionForm>
     </div>
     </div>

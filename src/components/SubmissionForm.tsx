@@ -2,47 +2,44 @@ import { useState } from "react";
 
 function SubmissionForm() {
   const [name, setName] = useState<string>("");
-  const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [contact, setContact] = useState<string>("");
-  const [resume, setResume] = useState<string>("");
+
   const [selectedOption, setSelectedOption] = useState<string>("");
-  const [about, setAbout] = useState<string>("");
+  const [request, setRequest] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(name, lastName, email, contact, resume, about, selectedOption);
+    console.log(name, email, contact, request, selectedOption);
     // Add your form submission logic here
   };
 
   const handleReset = () => {
     setName("");
-    setLastName("");
     setEmail("");
     setContact("");
-    setResume("");
+   
     setSelectedOption("");
-    setAbout("");
+    setRequest("");
   };
 
   return (
-    <div className="App">
-      <h1>Form in React (TypeScript)</h1>
-      <fieldset>
+    <div className=" bg-gradient-to-br from-gray-700 to-gray-950 submissionForm">
+      <fieldset  className="">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">First Name*</label>
-          <input
+          <label className="flex" htmlFor="name">Name*</label>
+          <input className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
             type="text"
             name="name"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Enter First Name"
+            placeholder="Enter Name"
             required
           />
 
           <label htmlFor="email">Enter Email* </label>
-          <input
+          <input className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
             type="email"
             name="email"
             id="email"
@@ -53,7 +50,7 @@ function SubmissionForm() {
           />
 
           <label htmlFor="contact">Contact*</label>
-          <input
+          <input  className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
             type="tel"
             name="contact"
             id="contact"
@@ -63,22 +60,22 @@ function SubmissionForm() {
             required
           />
 
-          <label htmlFor="select">Select your choice</label>
-          <select
+          <label  htmlFor="select">Select your choice</label>
+          <select className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
             name="select"
             id="select"
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
           >
             <option value="" disabled>
-              Select your Ans
+             
             </option>
-            <optgroup label="Beginers">
-              <option value="1">HTML</option>
-              <option value="2">CSS</option>
+            <optgroup label="Commission Request ">
+              <option value="Painting">Painting</option>
+              <option value="">CSS</option>
               <option value="3">JavaScript</option>
             </optgroup>
-            <optgroup label="Advance">
+            <optgroup label="Live Booking Request">
               <option value="4">React</option>
               <option value="5">Node</option>
               <option value="6">Express</option>
@@ -86,22 +83,23 @@ function SubmissionForm() {
             </optgroup>
           </select>
 
-          <label htmlFor="about">About</label>
-          <textarea
-            name="about"
-            id="about"
-            cols={30}
+          <label className="justify-center text-center" htmlFor="request">Request</label>
+          <textarea className="text-center text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
+            name="request"
+            id="request"
+            cols={40}
             rows={10}
-            value={about}
-            onChange={(e) => setAbout(e.target.value)}
-            placeholder="About your self"
+            value={request}
+            onChange={(e) => setRequest(e.target.value)}
+            placeholder="Request a quote for a custom piece or contact for live painting"
             required
           ></textarea>
-
-          <button type="button" onClick={handleReset}>
+          <div className="flex justify-evenly">
+          <button className="b" type="button" onClick={handleReset}>
             Reset
           </button>
-          <button type="submit">Submit</button>
+          <button  type="submit">Submit</button>
+          </div>  
         </form>
       </fieldset>
     </div>

@@ -17,7 +17,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
       onClick={onClose} // ✅ close on background click
     >
       <div
-        className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-lg max-w-4xl w-full p-6"
+        className="relative bg-gradient-to-b from-gray-800 to-gray-950 rounded-2xl shadow-lg max-w-4xl w-full p-6"
         onClick={(e) => e.stopPropagation()} // ✅ prevent closing when clicking inside
       >
         <button title="close-btn"
