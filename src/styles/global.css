@@ -16,7 +16,7 @@
 body {
   margin: 0;
   font-size: 21px;
-  line-height: 69px;
+  line-height: 24px;
   font-weight: 900;
   font-family: sans-serif;
   text-align: center;
@@ -27,7 +27,7 @@ header {
   display: flex;
   justify-content:space-around;
   text-align:center ;
-  font-size: 25px;
+  font-size: 95%;
   background-color: #261c30;
   box-shadow: 0 0 10px rgba(238, 232, 170, 0.9);
   text-shadow: -1px -1px 0 #ee00dc, 1px -1px 0 #00997d, -1px -1px 0 #00bb76, -1px -2px 0 #00bb76;
@@ -35,18 +35,23 @@ header {
 /* header:hover */
 
 .header1{
+  width: 80%;
   border-radius: 50px;
   background-color: hsla(0, 0%, 0%, 0.855);
+  background-image: url(/pattern2.jpg);
+  background-size: contain;
+  background-position: center;
+  background-blend-mode: luminosity;
 }
 
 h1 {
-line-height:90px;
-height: 90px;
-width: 90px;
+line-height:48px;
+height: 100px;
+width: 100px;
 border-radius: 50%; 
 text-align: center;
-color:rgb(61, 0, 130);
-border: #222;
+color: rgb(36, 27, 65);
+border-color: #332b86;
 text-shadow: -1px 1px 0 #ee00dc, 2px -1px 0 #00997d, -1px 1px 0 #00bb76, -1px -1px 0 #00bb76;
 }
 
