@@ -44,16 +44,16 @@ const Navbar = () => {
               )}
             </div >
             </li>
-            <li className=  ' justify-items-center mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'>
+            <li className=  'mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'
+            onClick={() => setMobileOpen(false)}>
               <Link to="/gallery">
-                <div>  
-                  <Images  size={40} /> 
-                </div>  
+                  <Images className='m-auto h-40' size={30} /> 
               </Link>
             </li> 
             <li>
               <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-2xl'> 
-                <button title='homebtn'> 
+                <button title='homebtn'
+                onClick={() => setMobileOpen(false)}> 
                 <Link to="/" className="home">
                 <House size={20} /> 
                 </Link>
@@ -63,7 +63,8 @@ const Navbar = () => {
             </li>
             <li>
               <div className= 'mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'> 
-                <button title='biobtn'> 
+                <button title='biobtn'
+                onClick={() => setMobileOpen(false)}> 
                 <Link to="/bio" className="bio">
                 <FileUser size={20} /> 
                 </Link>
@@ -74,7 +75,8 @@ const Navbar = () => {
             <li>
               <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
                 <button title='resumebtn'> 
-                <Link to="/resume" className="resume">
+                <Link to="/resume" className="resume"
+                onClick={() => setMobileOpen(false)}> 
                 <FileText size={20} /> 
                 </Link>
                 </button>
@@ -83,7 +85,8 @@ const Navbar = () => {
             <li>
               <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
                 <button title='cartbtn'> 
-                <Link to="/cart" className="cart flex items-center gap-1">
+                <Link to="/cart" className="cart flex items-center gap-1"
+                onClick={() => setMobileOpen(false)}> 
                 <ShoppingCart size={20} /> 
                 </Link>
                 </button>
