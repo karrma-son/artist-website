@@ -18,7 +18,7 @@ const Navbar = () => {
 
       {mobileOpen && (
          <Modal isOpen={mobileOpen} onClose={() => setMobileOpen(false)}>
-        <div className=" flex flex-col ml-1 justify-items-center ">
+        <div className=" flex flex-col h-300 ml-1 justify-items-center  ">
           <ul className="text-xl/40">
             <li> 
               <div className= ' mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-2xl'>

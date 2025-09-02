@@ -33,8 +33,8 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
           </div>
           <p>{art.medium}</p>
           <p>{art.size}</p>
-          <p>{art.year}</p>
           <p>${art.price}</p>
+    
           <button onClick={() => {
           console.log(`[Cart] Adding to cart: ${art.title} (${art.id})`)
           addToCart(art)

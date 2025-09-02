@@ -88,19 +88,19 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
   justify-content: center;
   align-items: center ;
   padding: 1rem;
-  gap: 3rem;
+  gap: 1rem;
 }
 .art-card {
-  flex: 0 1 auto;
+  flex: 0 auto;
   background-color: #222;
   border-radius: 10px;
   padding: 1rem;
-  height: 250px;
-  width: 240px;
+  height: 280px;
+  width: 200px;
   margin-top: 1px;
   overflow-x:hidden;
   box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
- 
+  object-fit:scale-down;
   
 }
 .art-card:hover {
@@ -112,33 +112,35 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
 }
 
 .art-card h3 {
-  font-size: 12px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 20px;
   letter-spacing: 0.111em;
   font-weight: 900;
   font-style: normal;
   margin: 0.5rem 0 0.25rem;
-  margin-top: -6px;
+  margin-top: -1px;
   margin-bottom: 5px;
 }
 
 .art-card img {
   margin: auto;
-  width: 80%;
-  height: 80%;
+  width: auto;
+  height: 100px;
   object-fit: scale-down;
-  margin-top: 10px;
+  margin-top: 18px;
+  margin-bottom: 10px;
 }
 
 .art-card img:hover {
-   height: 90%;
+   transform: scale(1.15);
 }
 .art-card p {
-  line-height: 13px;
+  line-height: 15px;
   letter-spacing: -0.052em;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 13px;
   margin: 0.25rem 0;
+  margin-bottom: auto;
 }
 .art-card button {
   display: inline-block;
@@ -150,6 +152,7 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  margin-top: 6px;
 }
 
 .art-card button:hover {
