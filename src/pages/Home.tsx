@@ -9,6 +9,8 @@ export default function Home() {
     <div>
       <br />
       <div>
+        <br />
+        <br />
         <h3>Welcome</h3>
         <h3>to the</h3>
          <h3>online gallery</h3>

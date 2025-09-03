@@ -9,12 +9,13 @@ const Navbar = () => {
   const [artOpen, setArtOpen] = useState(false);
 
   return (
-    <nav className="text-xl/40 ">
-      <div className="">
+    <nav className=" w-50 text-xl/40 ">
+      <div className=" ">
         <button  onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X size={28} color="#cdaaeeb3"/> : <SquareChevronDown size={48} color="#cdaaeeb3" />}
         </button>
       </div>
+
 
       {mobileOpen && (
          <Modal isOpen={mobileOpen} onClose={() => setMobileOpen(false)}>

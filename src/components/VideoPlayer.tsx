@@ -20,7 +20,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`flex items-center justify-center  overflow-hidden shadow-lg ${className}`}>
+    <div className={` w-64 h-64 mt-7 rounded-full flex items-center justify-center overflow-hidden shadow-lg shadow-gray-900 ${className}`}>
       <video
         src={src}
         title={title}
@@ -28,7 +28,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         loop={loop}
         muted={muted}
         controls={controls}
-        className=" "
+        className="w-full h-full object-cover"
       />
     </div>
   );
