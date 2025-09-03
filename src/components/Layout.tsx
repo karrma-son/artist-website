@@ -3,7 +3,8 @@ import React from 'react'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
-
+import { Link } from 'react-router-dom'
+import { motion } from "framer-motion";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -19,9 +20,15 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div></div>
           <main >{children}</main>
             <br />
-              <h1 className= "flex m-auto w-12 h-12 rounded-sm border-4 border-solid justify-center bg-radial from-indigo-900 to-purple-400"> 
-                Mason Karr
-              </h1>
+              <motion.h1
+                initial={{ x: -200, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
+                    className= "flex m-auto w-12 h-12 rounded-sm border-4 border-solid justify-center bg-radial from-indigo-900 to-purple-400"> 
+                  <Link to="/bio">
+                  Mason Karr
+                  </Link>
+              </motion.h1>
   
             <br />
               <Footer></Footer>  

@@ -1,13 +1,18 @@
 
 import { Link } from 'react-router-dom';
 import VideoPlayer from './VideoPlayer';
+import { motion } from 'framer-motion';
 
 export default function Header() {
   
 
   return (
     
-    <header  className="header1 flex:auto justify-center " >
+    <motion.header  
+      initial={{ y: 200, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 2, ease: "circOut" }}    
+      className="header1 flex:auto justify-center " >
       <Link to="/">
                 <VideoPlayer
                 src="/videos/loop3.mp4" 
@@ -19,6 +24,6 @@ export default function Header() {
                 className=" footer img rounded-full  border-gray-900 bm-auto mx-auto"
                 />
       </Link>
-    </header>
+    </motion.header>
   )
 }
