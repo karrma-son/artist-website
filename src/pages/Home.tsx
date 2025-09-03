@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import ArtCardGrid from '../components/ArtCardGrid'
-import {homePainting} from './Art/Acrylic on Canvas'
+import {homePainting} from './Art/AcrylicOnCanvas'
 import {homeDesign} from './Art/Design'
 import SubmissionForm from '../components/SubmissionForm'
 

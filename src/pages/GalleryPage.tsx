@@ -1,6 +1,6 @@
 import ArtCardGrid from '../components/ArtCardGrid'
-import {onePaintings, twoPaintings, threePaintings} from './Art/Acrylic on Canvas'
-
+ 
+import { onePaintings,twoPaintings,threePaintings } from './Art/AcrylicOnCanvas'
 
 
 
