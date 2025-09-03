@@ -36,13 +36,13 @@ header {
 /* header:hover */
 
 .header1{
-  width: 90%;
-  height: 90px;
+  width: 200px;
+  height: 140px;
   border-radius: 40px;
   background-color: hsla(0, 0%, 0%, 0.855);
-  background-image: url(/pattern2.jpg);
+  /*background-image: url(/pattern2.jpg);
   background-size: contain;
-  background-position: center;
+  background-position: center;*/
   background-blend-mode: luminosity;
 }
 
