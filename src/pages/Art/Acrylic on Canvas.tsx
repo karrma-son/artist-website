@@ -5,7 +5,7 @@ const onePaintings = [
     title: 'Angel or the Jester',
     size:   '16" x20"',
     price: 1200,
-    image: '/images/2020-The_Angel_Or_The_Jester_.jpg',
+    image: '/images/paintings/2020-The_Angel_Or_The_Jester_.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -15,7 +15,7 @@ const onePaintings = [
     title: 'Juiced',
     size:   '16" x20"',
     price: 950,
-    image: '/images/2020-Juiced.JPG',
+    image: '/images/paintings/2020-Juiced.JPG',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -24,7 +24,7 @@ const onePaintings = [
     title: 'Untitled',
     size:   '16" x20"',
     price: 950,
-    image: '/images/IMG_0486.jpg',
+    image: '/images/paintings/IMG_0486.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -33,7 +33,7 @@ const onePaintings = [
     title: 'Space Force One',
     size:   '16" x20"',
     price:  750,
-    image: '/images/space force 1.jpg',
+    image: '/images/paintings/space force 1.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
     
@@ -43,7 +43,7 @@ const onePaintings = [
     title: 'Cracked Eggs Still Hatch',
     size:   '16" x20"',
     price: 1250,
-    image: '/images/2020-Cracked_Eggs_Still_Hatch_.jpg',
+    image: '/images/paintings/2020-Cracked_Eggs_Still_Hatch_.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -52,7 +52,7 @@ const onePaintings = [
     title: 'Viscordian',
     size:   '16" x20"',
     price: 1100,
-    image: '/images/2020-Viscordian.jpg',
+    image: '/images/paintings/2020-Viscordian.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -62,7 +62,7 @@ const onePaintings = [
     title: 'Within Its Own Right',
     size:   '16" x20"',
     price: 1200,
-    image: '/images/2020-WIthin_It_s_Own_Right_.jpg',
+    image: '/images/paintings/2020-WIthin_It_s_Own_Right_.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -72,7 +72,7 @@ const onePaintings = [
     title: 'Shelter',
     size:   '16" x20"',
     price: 950,
-    image: '/images/2020-Shelter.jpg', 
+    image: '/images/paintings/2020-Shelter.jpg', 
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -82,7 +82,7 @@ const onePaintings = [
     title: 'Transmission(Reflect)',
     size:   '16" x20"',
     price:  450,
-    image: '/images/Transmission(Reflect).jpg',
+    image: '/images/paintings/Transmission(Reflect).jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -95,7 +95,7 @@ const twoPaintings = [
     title: 'Cup Runneth Over',
     size:   '16" x20"',
     price: 1200,
-    image: '/images/2021-Cup Runneth Over.jpg',
+    image: '/images/paintings/2021-Cup Runneth Over.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -105,7 +105,7 @@ const twoPaintings = [
     title: 'Communication Station(3)',
     size:   '16" x20"',
     price: 950,
-    image: '/images/2021-Communication Station(3).jpg',
+    image: '/images/paintings/2021-Communication Station(3).jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -114,7 +114,7 @@ const twoPaintings = [
     title: 'Untitled',
     size:   '16" x20"',
     price: 950,
-    image: '/images/2021-Transmission 2.jpg',
+    image: '/images/paintings/2021-Transmission 2.jpg',
     medium: 'Acrylic on canvas',
     category:'printmaking'
   },
@@ -123,7 +123,7 @@ const twoPaintings = [
     title: 'Space Force One',
     size:   '16" x20"',
     price:  750,
-    image: '/images/2021-Distillation_Station.jpg',
+    image: '/images/paintings/2021-Distillation_Station.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   }
@@ -134,7 +134,7 @@ const threePaintings = [
     title: 'Angel or the Jester',
     size:   '16" x20"',
     price: 1200,
-    image: '/images/2022-Communication Station.jpg',
+    image: '/images/paintings/2022-Communication Station.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -144,7 +144,7 @@ const threePaintings = [
     title: 'Juiced',
     size:   '16" x20"',
     price: 950,
-    image: '/images/2022-Distillation_Station_2.jpg',
+    image: '/images/paintings/2022-Distillation_Station_2.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -153,7 +153,7 @@ const threePaintings = [
     title: 'Untitled',
     size:   '16" x20"',
     price: 950,
-    image: '/images/2022-Getting Lucky.jpg',
+    image: '/images/paintings/2022-Getting Lucky.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -162,7 +162,7 @@ const threePaintings = [
     title: 'Space Force One',
     size:   '16" x20"',
     price:  750,
-    image: '/images/2022-In This Together_.jpg',
+    image: '/images/paintings/2022-In This Together_.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -171,7 +171,7 @@ const threePaintings = [
     title: 'Cracked Eggs Still Hatch',
     size:   '16" x20"',
     price: 1250,
-    image: '/images/2022-Planted A Seed That Won_t Grow_.jpg',
+    image: '/images/paintings/2022-Planted A Seed That Won_t Grow_.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -180,7 +180,7 @@ const threePaintings = [
     title: 'Viscordian',
     size:   '16" x20"',
     price: 1100,
-    image: '/images/2022-Rite de Passage_.jpg',
+    image: '/images/paintings/2022-Rite de Passage_.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   },
@@ -190,7 +190,7 @@ const threePaintings = [
     title: 'Within Its Own Right',
     size:   '16" x20"',
     price: 1200,
-    image: '/images/2022-Sprouted (Growth).jpg',
+    image: '/images/paintings/2022-Sprouted (Growth).jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -200,7 +200,7 @@ const threePaintings = [
     title: 'Shelter',
     size:   '16" x20"',
     price: 950,
-    image: '/images/2022-The Fruit Of The Family Tree_.jpg', 
+    image: '/images/paintings/2022-The Fruit Of The Family Tree_.jpg', 
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -210,7 +210,7 @@ const threePaintings = [
     title: 'Transmission(Reflect)',
     size:   '16" x20"',
     price:  450,
-    image: '/images/2022-Zygoat.jpg',
+    image: '/images/paintings/2022-Zygoat.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
     category:'painting'
@@ -225,7 +225,7 @@ const homePainting =
     title: 'Rite de Passage',
     size:   '16" x20"',
     price: 1100,
-    image: '/images/2022-Rite de Passage_.jpg',
+    image: '/images/paintings/2022-Rite de Passage_.jpg',
     medium: 'Acrylic on canvas',
     category:'painting'
   }

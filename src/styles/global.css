@@ -51,7 +51,7 @@ width: 100px;
 border-radius: 50%; 
 text-align: center;
 color: rgb(36, 27, 65);
-border-color: #332b86;
+border-color: rgb(38, 28, 48);
 text-shadow: -1px 1px 0 #ee00dc, 2px -1px 0 #00997d, -1px 1px 0 #00bb76, -1px -1px 0 #00bb76;
 }
 
@@ -135,7 +135,7 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
    transform: scale(1.15);
 }
 .art-card p {
-  line-height: 15px;
+  line-height:25px;
   letter-spacing: -0.052em;
   font-weight: 500;
   font-size: 13px;
@@ -145,6 +145,8 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
 .art-card button {
   display: inline-block;
   height: 30px;
+  width: 80px;
+  font-size: 45%;
   line-height: 20px;
   padding: 0.5rem 1rem;
   background-color: #a474d4da;
@@ -174,10 +176,23 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
 .price {
   color: #0f0;
 }
+.art-cart {
+  line-height: 40px;
+  margin-top: 4px;
+
+}
+.art-cart img {
+ 
+  margin-top: 4px;
+  margin-bottom: 6px;
+
+}
 
 .art-cart button {
   display: inline-block;
   height: 30px;
+  width: 80px;
+  font-size: 45%;
   line-height: 20px;
   padding: 0.5rem 1rem;
   background-color: #a474d4da;
@@ -185,6 +200,8 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  margin-top: 6px;
+  margin-bottom: 20px;
 }
 
 
@@ -214,6 +231,16 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
     margin-top: 10px;
 }
 
+
+footer {
+  display: flex;
+  justify-content:space-around;
+  text-align:center ;
+  font-size: 95%;
+  background-color: rgb(38, 28, 48);
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.9);
+  text-shadow: -1px -1px 0 #ee00dc, 1px -1px 0 #00997d, -1px -1px 0 #00bb76, -1px -2px 0 #00bb76;
+}
 
  base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {

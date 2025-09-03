@@ -64,7 +64,7 @@ const homeDesign =[
     title: '',
     size:   '',
     price: 2,
-    image: '/design/2021-Shaman.jpg',
+    image: 'images/design/2021-Shaman.jpg',
     medium: 'Photshop',
     year: '2020',
     category:'Design'

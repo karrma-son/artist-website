@@ -2,6 +2,7 @@
 import React from 'react'
 import Header from './Header'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -14,8 +15,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <Navbar ></Navbar>
         </nav>
       </header>
-      <div></div>
-      <main >{children}</main>
+        <div></div>
+          <main >{children}</main>
+              <Footer></Footer>  
     </div>
   )
       
