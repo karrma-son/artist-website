@@ -12,7 +12,8 @@ type ModalProps = {
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
-  return (
+  return ( 
+  <AnimatePresence>
     <motion.div
       key="modal"
       initial={{ opacity: 0 }}
@@ -39,6 +40,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         {children}
       </motion.div>
     </motion.div>
+  </AnimatePresence>
   );
 };
 
