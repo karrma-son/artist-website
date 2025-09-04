@@ -9,8 +9,8 @@ export default function Header() {
   return (
     
     <motion.header  
-      initial={{ y: 200, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ x: 200, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 2, ease: "circOut" }}    
       className="header1 flex:auto justify-center " >
       <Link to="/">

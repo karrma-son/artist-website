@@ -1,59 +1,34 @@
-// src/components/Navbar.tsx
-import { useState, useRef } from 'react';
+import { useRef, useState } from "react";
 import { Link } from 'react-router-dom';
 import { X, ShoppingCart, SquareChevronDown, Images,  Brush, FileUser, House,  FileText } from 'lucide-react'; // npm install lucide-react
 import Modal from './Modal';
-import {motion} from 'framer-motion'
 import Draggable from "react-draggable";
 
-const Navbar = () => {
-  const nodeRef = useRef(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [artOpen, setArtOpen] = useState(false);
+interface MobileNavProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
+    const nodeRef = useRef(null);
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const [artOpen, setArtOpen] = useState(false);
+
+  if (!isOpen) return null;
 
   return (
-    <Draggable nodeRef={nodeRef}>
-    <nav 
-      ref={nodeRef}
-      className="flex flex-col justify-center items-center">
-      {/* Desktop Menu */}
-      <motion.div
-                  initial={{ x: 200, opacity: 0 }}
-                  animate={{ x: 0, opacity: .95 }}
-                  transition={{ duration: 3, ease: "easeIn" }}
-        className="hidden md:flex flex-col gap-14 text-gray-100 text-lg w-40 h-48 bg-gradient-to-bl from-slate-700 to-gray-600  border-gray-800 border-2 shadow-lg shadow-gray-950  rounded-4xl p-6 fixed right-48">
-        <ul>
-        <li>
-          <Link to="/art/Paintings" className="hover:text-fuchsia-300 flex items-center gap-2">
-            <Brush size={18} /> Art
-          </Link>
-        </li>
-        <li>
-          <Link to="/gallery" className="hover:text-fuchsia-400 flex items-center gap-1">
-            <Images size={18} /> Gallery
-          </Link>
-        </li>
-        <li>
-          <Link to="/bio" className="hover:text-fuchsia-400 flex items-center gap-1">
-            <FileUser size={18} /> Bio
-          </Link>
-        </li>
-        <li>
-          <Link to="/resume" className="hover:text-fuchsia-400 flex items-center gap-1">
-            <FileText size={18} /> Resume
-          </Link>
-        </li>
-        <li>
-          <Link to="/cart" className="hover:text-fuchsia-400 flex items-center gap-1">
-            <ShoppingCart size={18} /> Cart
-          </Link>
-        </li>
-      </ul>
-    </motion.div>
-      
-    
-
-
+    <div
+      className=""
+      onClick={onClose} // closes when clicking backdrop
+    >
+      <Draggable nodeRef={nodeRef}>
+        <div
+          ref={nodeRef}
+          className="bg-gradient-to-bl from-slate-700 to-fuchsia-600 rounded-2xl p-6 w-64 shadow-xl cursor-move"
+          onClick={(e) => e.stopPropagation()} // stop click from closing when dragging
+        >
+          {/* Mobile nav content */}
+          
 
 <div className="md:hidden bg-radial from-black to-gray-700  border-gray-800  shadow-lg shadow-gray-900 border-3 rounded-2xl fixed top-30 right-20 z-30">
   <button onClick={() => setMobileOpen(!mobileOpen)}>
@@ -142,11 +117,10 @@ const Navbar = () => {
         </div>
         </Modal>
       )}
-    </nav>
-    </Draggable>
+        </div>
+      </Draggable>
+    </div>
   );
 };
 
-export default Navbar;
-
-
+export default MobileNav;
