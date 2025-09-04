@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { X, ShoppingCart, SquareChevronDown, Images,  Brush, FileUser, House,  FileText } from 'lucide-react'; // npm install lucide-react
 import Modal from './Modal';
 import {motion} from 'framer-motion'
-import Draggable from "react-draggable";
+//import Draggable from "react-draggable";
 
 const Navbar = () => {
   const nodeRef = useRef(null);
@@ -12,7 +12,7 @@ const Navbar = () => {
   const [artOpen, setArtOpen] = useState(false);
 
   return (
-    <Draggable nodeRef={nodeRef}>
+    //<Draggable nodeRef={nodeRef}>
     <nav 
       ref={nodeRef}
       className="flex flex-col justify-center items-center">
@@ -143,7 +143,7 @@ const Navbar = () => {
         </Modal>
       )}
     </nav>
-    </Draggable>
+    //</Draggable>
   );
 };
 
