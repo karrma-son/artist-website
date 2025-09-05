@@ -29,7 +29,7 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
         <div className=" bg-gradient-to-b from-gray-700 to-gray-900 art-card" key={art.id}>
           <div onClick={() => setSelectedArt(art)} className="cursor-pointer">
             <h3>{art.title}</h3>
-            <img className='border-2 border-indigo-950' src={art.image} alt={art.title} />
+            <img className=' border-indigo-950' src={art.image} alt={art.title} />
           </div>
           <p>{art.medium}</p>
           <p>{art.size}</p>

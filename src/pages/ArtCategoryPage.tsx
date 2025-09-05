@@ -14,7 +14,7 @@ const ArtCategoryPage = () => {
     : allArtData;
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="flex flex-wrap content-center mx-auto p-4">
       <div></div>
       <h1 className= "  text-center font-bold text-white capitalize">
         {category || 'All Art'}

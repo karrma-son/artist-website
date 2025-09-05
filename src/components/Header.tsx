@@ -21,7 +21,8 @@ export default function Header() {
                 loop
                 muted
                 controls={false}
-                className=" footer img rounded-full  border-gray-900 bm-auto mx-auto"
+                className=" img rounded-full  border-gray-900 bm-auto mx-auto"
+                
                 />
       </Link>
     </motion.header>

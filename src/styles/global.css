@@ -35,6 +35,10 @@ header {
 }
 /* header:hover */
 
+video {
+  pointer-events: none;
+}
+
 .header1{
   width: 200px;
   height: 140px;
@@ -92,15 +96,15 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
   justify-content: center;
   align-items: center ;
   padding: 1rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 .art-card {
-  flex: 0 auto;
+  
   background-color: #222;
   border-radius: 10px;
   padding: 1rem;
-  height: 280px;
-  width: 200px;
+  height: 480px;
+  width: 480px;
   margin-top: 1px;
   overflow-x:hidden;
   box-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
@@ -129,14 +133,14 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
 .art-card img {
   margin: auto;
   width: auto;
-  height: 100px;
+  height: 300px;
   object-fit: scale-down;
   margin-top: 18px;
   margin-bottom: 10px;
 }
 
 .art-card img:hover {
-   transform: scale(1.15);
+   transform: scale(1.05);
 }
 .art-card p {
   line-height:25px;

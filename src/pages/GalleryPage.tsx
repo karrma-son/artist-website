@@ -6,7 +6,7 @@ import { onePaintings,twoPaintings,threePaintings } from './Art/AcrylicOnCanvas'
 
 const GalleryPage = () => {
   return (
-    <div>
+    <div className= "">
       <h2>2020</h2>
       <ArtCardGrid artData={onePaintings} />
       <h2>2021</h2>

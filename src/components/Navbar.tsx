@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { X, ShoppingCart, SquareChevronDown, Images,  Brush, FileUser, House,  FileText } from 'lucide-react'; // npm install lucide-react
 import Modal from './Modal';
 import {motion} from 'framer-motion'
-//import Draggable from "react-draggable";
+// 
 
 const Navbar = () => {
   const nodeRef = useRef(null);
@@ -18,6 +18,7 @@ const Navbar = () => {
       className="flex flex-col justify-center items-center">
       {/* Desktop Menu */}
       <motion.div
+                  drag
                   initial={{ x: 200, opacity: 0 }}
                   animate={{ x: 0, opacity: .95 }}
                   transition={{ duration: 3, ease: "easeIn" }}
