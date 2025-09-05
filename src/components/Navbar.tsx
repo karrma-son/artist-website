@@ -56,11 +56,13 @@ const Navbar = () => {
 
 
 
-<div className="md:hidden bg-radial from-black to-gray-700  border-gray-800  shadow-lg shadow-gray-900 border-3 rounded-2xl fixed top-30 right-20 z-30">
+<motion.div 
+    drag
+    className="md:hidden bg-radial from-black to-gray-700  border-gray-800  shadow-lg shadow-gray-900 border-3 rounded-2xl fixed top-30 right-7 z-30">
   <button onClick={() => setMobileOpen(!mobileOpen)}>
     {mobileOpen ? <X size={28} color="#cdaaeeb3" /> : <SquareChevronDown size={48} color="#cdaaeeb3" />}
   </button>
-      </div>
+      </motion.div>
 
 
       {mobileOpen && (
