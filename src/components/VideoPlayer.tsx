@@ -9,6 +9,7 @@ interface VideoPlayerProps {
   muted?: boolean;
   controls?: boolean;
   className?: string;
+  playsInline?: boolean;
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
@@ -19,6 +20,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   muted = false,
   controls = true,
   className = "",
+  playsInline = true,
 }) => {
   return (
     <motion.div
@@ -39,6 +41,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         loop={loop}
         muted={muted}
         controls={controls}
+        playsInline = {playsInline}
         className="w-full h-full object-cover"
       />
       </div>
