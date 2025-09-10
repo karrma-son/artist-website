@@ -1,5 +1,18 @@
 
-const onePaintings = [
+// src/pages/PaintingsPage.tsx
+import { paintingData } from "../../data"
+import ArtCardGrid from "../../components/ArtCardGrid"
+
+export default function PaintingsPage() {
+  return (
+    <div>
+      <h1>Paintings</h1>
+      <ArtCardGrid artData={paintingData} />
+    </div>
+  )
+}
+
+/*const onePaintings = [
   {
     id: 1,
     title: 'Angel or the Jester',
@@ -231,4 +244,4 @@ const homePainting =
   }
   
 ]
-export {onePaintings, twoPaintings, threePaintings, homePainting}
+export {onePaintings, twoPaintings, threePaintings, homePainting}*/

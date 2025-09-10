@@ -15,13 +15,13 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
     console.log(`[ArtCardGrid] Image clicked with id: ${id}`)
   }
 
-  useEffect(() => {
-    console.log('[ArtCardGrid] OPEN')
-    return () => {
-      console.log('[ArtCardGrid] CLOSED')
-    }
-  }, [])
-
+useEffect(() => {
+  if (selectedArt) {
+    console.log(`[Modal] OPENED for ${selectedArt.title}`)
+  } else {
+    console.log('[Modal] CLOSED')
+  }
+}, [selectedArt])
 
   return (
     <section className="gallery">
@@ -31,18 +31,19 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
             <h3>{art.title}</h3>
             <img className=' border-indigo-950' src={art.image} alt={art.title} />
           </div>
-          <p>{art.medium}</p>
-          <p>{art.size}</p>
-          <p>${art.price}</p>
-    
-          <button onClick={() => {
-          console.log(`[Cart] Adding to cart: ${art.title} (${art.id})`)
-          addToCart(art)
-        }
-      }
->
-  Add to Cart
-</button>
+            <p>{art.medium}</p>
+            {art.size && <p>{art.size}</p>}
+            {art.year && <p>{art.year}</p>}
+            {art.price !== undefined && (
+    <button
+      onClick={() => {
+        console.log(`[Cart] Adding to cart: ${art.title} (${art.id})`);
+        addToCart(art);
+    }}
+  >
+    Add to Cart
+  </button>
+)}
         </div>
       ))}
 
@@ -60,6 +61,17 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
             <p className="mt-4 text-gray-700 dark:text-gray-300">
               {selectedArt.description || 'No description available.'}
             </p>
+              {selectedArt.price !== undefined && (
+                <button
+                  className="mt-4"
+                  onClick={() => {
+                    console.log(`[Cart] Adding to cart: ${selectedArt.title} (${selectedArt.id})`);
+                    addToCart(selectedArt);
+                  }}
+        >
+          Add to Cart
+        </button>
+      )}
           </div>
         )}
       </Modal>

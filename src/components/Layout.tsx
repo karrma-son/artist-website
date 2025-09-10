@@ -10,10 +10,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="bg-gradient-to-br from from-gray-900 via-purple-900 to-indigo-900 ..." >
       <header className='bg-[url(/pattern2.jpg)] bg-center bg-blend-luminosity flex justify-between content-center'> 
-                  
-
          <Header></Header>
-
       </header>
         <div></div>
         <motion.nav>

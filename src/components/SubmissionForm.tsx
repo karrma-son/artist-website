@@ -24,7 +24,7 @@ function SubmissionForm() {
   };
 
   return (
-    <div className=" bg-gradient-to-br from-gray-700 to-gray-950 submissionForm">
+    <div className=" bg-gradient-to-br from-gray-700 to-gray-950 border-gray-600 border-4 drop-shadow-lg shadow-gray-900  submissionForm">
       <fieldset  className="">
         <form onSubmit={handleSubmit}>
           <label className="flex" htmlFor="name">Name*</label>

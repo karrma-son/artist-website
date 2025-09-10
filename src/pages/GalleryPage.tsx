@@ -1,19 +1,21 @@
 import ArtCardGrid from '../components/ArtCardGrid'
  
-import { onePaintings,twoPaintings,threePaintings } from './Art/AcrylicOnCanvas'
+import {paintings2018, paintings2020, paintings2021, paintings2022 } from '../data';
 
 
 
 const GalleryPage = () => {
   return (
     <div className= "">
+      <h2>2018</h2>
+      <ArtCardGrid artData={paintings2018} />
       <h2>2020</h2>
-      <ArtCardGrid artData={onePaintings} />
+      <ArtCardGrid artData={paintings2020} />
       <h2>2021</h2>
-      <ArtCardGrid artData={twoPaintings} />
+      <ArtCardGrid artData={paintings2021} />
       <br></br>
       <h2>2022</h2>
-      <ArtCardGrid artData={threePaintings} />
+      <ArtCardGrid artData={paintings2022} />
       <br></br>
       <h2>2023</h2>
       <br></br>

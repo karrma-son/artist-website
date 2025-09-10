@@ -1,20 +1,14 @@
 import { createContext, useContext, useState, type ReactNode } from 'react'
+import type { ArtPiece } from '../types/ArtPiece'
 
-type ArtPiece = {
-  id: number
-  title: string
-  price: number
-  image: string
-  medium?: string
-  year?: string
-}
+
 
 type CartContent = {
   cart: ArtPiece[]
   addToCart: (item: ArtPiece) => void
   removeFromCart: (id: string | number) => void
   clearCart: () => void
-}
+};
 
 const CartContext = createContext<CartContent>({
   cart: [],

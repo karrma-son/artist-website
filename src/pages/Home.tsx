@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom'
-import ArtCardGrid from '../components/ArtCardGrid'
-import {homePainting} from './Art/AcrylicOnCanvas'
-import {homeDesign} from './Art/Design'
+
+import ArtScroller from '../components/ArtScroller'
 import SubmissionForm from '../components/SubmissionForm'
 import { motion } from 'framer-motion'
+
 
 export default function Home() {
   return (
@@ -31,16 +30,7 @@ export default function Home() {
           Mason Karr
         </motion.h2>
      <br />
-
-     <div className='flex flex-wrap content-center justify-center'>
-      <Link to="/art/Paintings">
-      <ArtCardGrid artData={homePainting} />
-      </Link>
-      <Link to="/art/Design">
-      <ArtCardGrid artData={homeDesign} />
-      </Link>
-      </div>
-
+      <ArtScroller></ArtScroller>
        <motion.p
           initial={{ x: 200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
