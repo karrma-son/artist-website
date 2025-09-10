@@ -67,3 +67,6 @@ export default tseslint.config([
   },
 ])
 ```
+### TypeScript Config Structure
+Currently using a single `tsconfig.json` for simplicity with Vite + Netlify.
+Legacy configs (`tsconfig.app.json`, `tsconfig.node.json`) are saved in `/configs` to demonstrate project references / monorepo structure if needed.

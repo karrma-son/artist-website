@@ -1,0 +1,81 @@
+my-monorepo/
+├─ package.json               
+
+                                {
+                                "name": "my-monorepo",
+                                "private": true,
+                                "version": "1.0.0",
+                                "workspaces": [
+                                    "packages/*"
+                                ],
+                                "scripts": {
+                                    "build": "tsc -b",
+                                    "dev:app": "pnpm --filter app dev",
+                                    "dev:server": "pnpm --filter server dev",
+                                    "typecheck": "tsc -b --noEmit"
+                                },
+                                "devDependencies": {
+                                    "typescript": "^5.8.3"
+                                }
+                                }
+├─ tsconfig.json               # root config w/ references
+├─ pnpm-workspace.yaml         
+                                #packages:
+                                #  - "packages/*"
+│
+├─ packages/
+│  ├─ app/                     # React frontend
+│  │  ├─ src/
+│  │  ├─ tsconfig.json         # references root + shared types
+│  │  └─ package.json
+                                {
+                                "name": "my-monorepo",
+                                "private": true,
+                                "version": "1.0.0",
+                                "workspaces": [
+                                    "packages/*"
+                                ],
+                                "scripts": {
+                                    "build": "tsc -b",
+                                    "dev:app": "pnpm --filter app dev",
+                                    "dev:server": "pnpm --filter server dev",
+                                    "typecheck": "tsc -b --noEmit"
+                                },
+                                "devDependencies": {
+                                    "typescript": "^5.8.3"
+                                }
+                                }
+│  │
+│  ├─ server/                  # Node/Express backend
+│  │  ├─ src/
+│  │  ├─ tsconfig.json         # Node-targeted config
+│  │  └─ package.json
+
+                                {
+                                "name": "server",
+                                "version": "1.0.0",
+                                "private": true,
+                                "scripts": {
+                                    "dev": "ts-node src/index.ts",
+                                    "build": "tsc -p tsconfig.json"
+                                },
+                                "dependencies": {
+                                    "express": "^4.19.0"
+                                }
+                                }
+
+│  │
+│  └─ shared/                  # Shared types/utils
+│     ├─ src/
+│     ├─ tsconfig.json
+│     └─ package.json
+                                {
+                                "name": "shared",
+                                "version": "1.0.0",
+                                "private": true,
+                                "main": "dist/index.js",
+                                "types": "dist/index.d.ts",
+                                "scripts": {
+                                    "build": "tsc -p tsconfig.json"
+                                }
+                                }
