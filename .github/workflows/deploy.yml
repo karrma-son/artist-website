@@ -1,4 +1,4 @@
-name: Deploy Vite site to GitHub Pages
+name: Deploy to GitHub Pages and Netlify
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "deployments"
   cancel-in-progress: true
 
 jobs:
@@ -33,12 +33,27 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload artifact
+      - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
-  deploy:
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: ./dist
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "GitHub Actions deploy"
+          enable-commit-comment: false
+          enable-pull-request-comment: false
+          enable-commit-status: true
+          alias: main
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+  deploy-pages:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
