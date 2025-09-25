@@ -3,6 +3,10 @@ import React, { useState, useEffect} from 'react'
 import { useCart } from '../context/CartContext'
 import type { ArtPiece } from '../types/ArtPiece'
 import Modal from './Modal'
+
+
+
+
 type ArtCardGridProps = {
   artData: ArtPiece[]
 }

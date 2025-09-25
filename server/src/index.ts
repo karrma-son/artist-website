@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import artRoutes from "./routes/art";
 import { MongoClient, ServerApiVersion, Db } from "mongodb";
 
 dotenv.config();
@@ -9,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+
 app.use(cors());
 app.use(express.json());
 
@@ -23,27 +25,20 @@ let db: Db; // will hold reference to your DB
 async function startServer() {
   try {
     // Connect the client and keep it open
+    console.log("⏳ Connecting to MongoDB...");
     await client.connect();
     console.log("✅ Connected to MongoDB Atlas");
 
-    // Choose a default database (replace 'myDatabase' with your DB name)
-    db = client.db("myDatabase");
+   db = client.db("art-database");
+   
 
     // Example root route
-    app.get("/", (req, res) => {
+    app.get("/", (_, res) => {
       res.send("API is running 🚀");
     });
 
-    // Example route using MongoDB
-    app.get("/api/art", async (req, res) => {
-      try {
-        const art = await db.collection("artworks").find({}).toArray();
-        res.json(art);
-      } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Failed to fetch artworks" });
-      }
-    });
+    app.use("/api/art", artRoutes(db));
+    
 
     app.listen(PORT, () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
