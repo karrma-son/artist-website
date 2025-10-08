@@ -19,6 +19,9 @@ const ArtModalContent: React.FC<ArtModalContentProps> = ({ art, onAddToCart }) =
     <p className="mt-4 text-gray-700 dark:text-gray-300">
       {art.description || 'No description available.'}
     </p>
+    <p className="text-sm text-gray-400">
+      Viewed {art.clickCount ?? 0} times
+    </p>
     {art.price !== undefined && (
       <button className="mt-4" onClick={() => onAddToCart(art)}>
         Add to Cart

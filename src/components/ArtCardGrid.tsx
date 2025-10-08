@@ -18,9 +18,25 @@ const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
 const { addToCart } = useCart()
 const [selectedArt, setSelectedArt] = useState<ArtPiece | null>(null)
 
-const handleImageClick = (id: string | number) => {
-    console.log(`[ArtCardGrid] Image clicked with id: ${id}`)
+
+const handleImageClick = async (id: string | number) => {
+  try {
+    console.log(`[ArtCardGrid] Image clicked with id: ${id}`);
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/art/${id}/click`,
+      { method: "PATCH" }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to increment click count for ${id}`);
+    }
+
+    const data = await response.json();
+    console.log("[ClickCount Updated]", data);
+  } catch (error) {
+    console.error("Error updating click count:", error);
   }
+};
 
   
 useEffect(() => {
@@ -37,14 +53,18 @@ useEffect(() => {
         <ArtCard
           key={art.id}
           art={art}
-          onSelect={setSelectedArt}
+          onSelect={(art) => {
+          handleImageClick(art.id);
+          setSelectedArt(art);
+         }}
           onAddToCart={addToCart}
         />
       ))}
 
       <Modal isOpen={!!selectedArt} onClose={() => setSelectedArt(null)}>
         {selectedArt && (
-          <ArtModalContent art={selectedArt} 
+          <ArtModalContent 
+            art={selectedArt} 
             onAddToCart={addToCart}
             onImageClick={handleImageClick} 
            />

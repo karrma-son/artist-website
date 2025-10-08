@@ -9,4 +9,6 @@ export type ArtPiece = {
   medium: string;
   category: string;
   description?: string;
+  clickCount: number;
+
 };

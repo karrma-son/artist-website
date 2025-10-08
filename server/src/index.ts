@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import artRoutes from "./routes/art";
 import { MongoClient, ServerApiVersion, Db } from "mongodb";
 
+
+
 dotenv.config();
 
 const app = express();
@@ -13,6 +15,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+app.use("/api", artRoutes);
 
 // MongoDB setup
 const uri = process.env.MONGODB_URI!;
