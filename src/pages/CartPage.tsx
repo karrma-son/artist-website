@@ -1,5 +1,6 @@
 // src/pages/CartPage.tsx
-import { useCart } from '../context/CartContext'
+import { useCart } from "../hooks/useCart";
+
 
 const CartPage = () => {
   const { cart, removeFromCart, clearCart } = useCart()

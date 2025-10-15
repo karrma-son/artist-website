@@ -3,8 +3,17 @@ import ArtScroller from '../components/ArtScroller'
 import SubmissionForm from '../components/SubmissionForm'
 import { motion } from 'framer-motion'
 
+type HomeProps = {
+  artistName: string
+  introText?: string
+  highlightMessage?: string
+}
 
-export default function Home() {
+export default function  Home({
+  artistName,
+  introText = "Explore original works of art — painting, design, illustration, and more.",
+  highlightMessage = "Welcome to the online gallery of",
+}: HomeProps) {
   return (
     <div className='flex flex-wrap justify-center items-center ' >
       <br />
@@ -16,18 +25,17 @@ export default function Home() {
           whileInView={{x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "easeIn" }}
           viewport={{ once: true }}>
-        <h3>Welcome</h3>
-        <h3>to the</h3>
-         <h3>online gallery</h3>
-         <h3> of</h3>
-         </motion.div>
+        <h3>{highlightMessage}</h3>
+        </motion.div>
+
+        
         <motion.h2
           initial={{ z: 200, opacity: 0 }}
           whileInView={{ z: 0, opacity: 1 }}
           transition={{ duration: 3, ease: "easeIn" }}
           viewport={{ once: true }}
           className="text-lg mt-8">
-          Mason Karr
+          {artistName}
         </motion.h2>
      <br />
       <ArtScroller></ArtScroller>
@@ -37,7 +45,7 @@ export default function Home() {
           transition={{ duration: 3, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-lg mt-8">
-          Explore original works of art — painting, design, illustration, and more.
+          {introText}
         </motion.p>
       <SubmissionForm></SubmissionForm>
     </div>

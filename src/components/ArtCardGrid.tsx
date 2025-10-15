@@ -1,6 +1,6 @@
 // src/components/ArtCardGrid.tsx
 import React, { useState, useEffect} from 'react'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../hooks/useCart'
 import type { ArtPiece } from '../types/ArtPiece'
 import Modal from './Modal'
 import ArtCard from './ArdCard'

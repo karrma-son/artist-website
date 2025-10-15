@@ -8,12 +8,21 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import ArtCategoryPage from './pages/ArtCategoryPage'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route 
+          path="/" 
+          element={
+          <Home
+          artistName="Mason Karr"
+          highlightMessage="Welcome to the online gallery of"
+          introText="Browse original works — painting, serigraphy, and digital design."
+          />
+        } 
+      />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/art" element={<GalleryPage />} />
           <Route path="/art/:category" element={<ArtCategoryPage />} />

@@ -4,6 +4,7 @@ import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
+import MotionNav from './MotionNav'
 import { motion } from "framer-motion";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -13,9 +14,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
          <Header></Header>
       </header>
         <div></div>
-        <motion.nav>
-          <Navbar ></Navbar>
-        </motion.nav>
+     <MotionNav>
+        <Navbar />
+      </MotionNav>
+
           <main>{children}</main>
             <br />
               <motion.h1
