@@ -9,7 +9,9 @@ export const paintings2021: ArtPiece[] = [
     image: '/images/paintings/2021-Cup Runneth Over.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
   {
     id: 2,
@@ -18,7 +20,9 @@ export const paintings2021: ArtPiece[] = [
     price: 950,
     image: '/images/paintings/2021-Communication Station(3).jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
     {
     id: 3,
@@ -27,7 +31,9 @@ export const paintings2021: ArtPiece[] = [
     price: 950,
     image: '/images/paintings/2021-Transmission 2.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
     {
     id: 4,
@@ -36,6 +42,8 @@ export const paintings2021: ArtPiece[] = [
     price:  750,
     image: '/images/paintings/2021-Distillation_Station.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   }
 ]

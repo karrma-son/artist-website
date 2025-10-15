@@ -9,7 +9,9 @@ export const paintings2022: ArtPiece[] = [
     image: '/images/paintings/2022-Communication Station.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
   {
     id: 2,
@@ -18,7 +20,9 @@ export const paintings2022: ArtPiece[] = [
     price: 950,
     image: '/images/paintings/2022-Distillation_Station_2.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
     {
     id: 3,
@@ -27,7 +31,9 @@ export const paintings2022: ArtPiece[] = [
     price: 950,
     image: '/images/paintings/2022-Getting Lucky.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
     {
     id: 4,
@@ -36,7 +42,9 @@ export const paintings2022: ArtPiece[] = [
     price:  750,
     image: '/images/paintings/2022-In This Together_.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
     {
     id: 5,
@@ -45,7 +53,9 @@ export const paintings2022: ArtPiece[] = [
     price: 1250,
     image: '/images/paintings/2022-Planted A Seed That Won_t Grow_.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
     {
     id: 6,
@@ -54,7 +64,9 @@ export const paintings2022: ArtPiece[] = [
     price: 1100,
     image: '/images/paintings/2022-Rite de Passage_.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
 
   {
@@ -65,7 +77,9 @@ export const paintings2022: ArtPiece[] = [
     image: '/images/paintings/2022-Sprouted (Growth).jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
   {
     id: 8,
@@ -75,7 +89,9 @@ export const paintings2022: ArtPiece[] = [
     image: '/images/paintings/2022-The Fruit Of The Family Tree_.jpg', 
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
     {
     id: 9,
@@ -85,7 +101,9 @@ export const paintings2022: ArtPiece[] = [
     image: '/images/paintings/2022-Zygoat.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
 
 ]

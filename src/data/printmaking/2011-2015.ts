@@ -9,7 +9,8 @@ export const  printData: ArtPiece[] = [
     price:  750,
     image: '/images/printmaking/DSC00770.JPG',
     medium: 'blockprint',
-    category:'printmaking'
+    category:'printmaking',
+    clickCount: 0,
     
   },
   
@@ -20,7 +21,8 @@ export const  printData: ArtPiece[] = [
     price: 1100,
     image: '/images/paintings/2018-Viscordian.jpg',
     medium: 'silkscreen',
-    category:'printmaking'
+    category:'printmaking',
+    clickCount: 0,
   },
 
     {
@@ -31,6 +33,7 @@ export const  printData: ArtPiece[] = [
     image: '/images/paintings/2018-Shelter.jpg', 
     medium: 'lithography',
     year: '2020',
-    category:'printmaking'
+    category:'printmaking',
+    clickCount: 0,
   },
 ]

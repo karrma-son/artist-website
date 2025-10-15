@@ -8,6 +8,7 @@ export const  homeDesign: ArtPiece[] = [
     image: 'images/design/2021-Shaman.jpg',
     medium: 'Design',
     category:'Design',
-}
+    clickCount: 0,
+  }
   
 ]

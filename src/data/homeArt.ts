@@ -9,7 +9,8 @@ export const  homePainting: ArtPiece[] = [
     image: '/images/paintings/2020-The_Angel_Or_The_Jester_.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'painting'
+    category:'painting',
+    clickCount: 0,
   },
   {
     id: 5,
@@ -17,6 +18,7 @@ export const  homePainting: ArtPiece[] = [
     image: 'images/design/2021-Shaman.jpg',
     medium: 'Design',
     category:'Design',
+    clickCount: 0,
 }
   
 ]

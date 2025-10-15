@@ -9,7 +9,9 @@ export const  paintings2018: ArtPiece[] = [
     price:  750,
     image: '/images/paintings/2018-spaceforce1.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
     
   },
   
@@ -20,7 +22,9 @@ export const  paintings2018: ArtPiece[] = [
     price: 1100,
     image: '/images/paintings/2018-Viscordian.jpg',
     medium: 'Acrylic on canvas',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
 
     {
@@ -31,6 +35,8 @@ export const  paintings2018: ArtPiece[] = [
     image: '/images/paintings/2018-Shelter.jpg', 
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'paintings'
+    category:'paintings',
+    clickCount: 0
+
   },
 ]

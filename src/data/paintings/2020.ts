@@ -8,7 +8,9 @@ export const  paintings2020: ArtPiece[] = [
     image: '/images/paintings/2020-The_Angel_Or_The_Jester_.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'painting'
+    category:'painting',
+    clickCount: 0
+
   },
   {
     id: 2,
@@ -17,7 +19,9 @@ export const  paintings2020: ArtPiece[] = [
     price: 950,
     image: '/images/paintings/2020-Juiced.JPG',
     medium: 'Acrylic on canvas',
-    category:'painting'
+    category:'painting',
+    clickCount: 0
+
   },
     {
     id: 3,
@@ -26,7 +30,9 @@ export const  paintings2020: ArtPiece[] = [
     price: 950,
     image: '/images/paintings/IMG_0486.jpg',
     medium: 'Acrylic on canvas',
-    category:'painting'
+    category:'painting',
+    clickCount: 0
+
   },
 
     {
@@ -36,7 +42,9 @@ export const  paintings2020: ArtPiece[] = [
     price: 1250,
     image: '/images/paintings/2020-Cracked_Eggs_Still_Hatch_.jpg',
     medium: 'Acrylic on canvas',
-    category:'painting'
+    category:'painting',
+    clickCount: 0
+
   },
 
   {
@@ -47,7 +55,9 @@ export const  paintings2020: ArtPiece[] = [
     image: '/images/paintings/2020-WIthin_It_s_Own_Right_.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'painting'
+    category:'painting',
+    clickCount: 0
+
   },
 
     {
@@ -58,7 +68,9 @@ export const  paintings2020: ArtPiece[] = [
     image: '/images/paintings/Transmission(Reflect).jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'painting'
+    category:'painting',
+    clickCount: 0
+
   },
     
 ];

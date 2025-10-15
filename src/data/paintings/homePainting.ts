@@ -9,6 +9,8 @@ export const  homePainting: ArtPiece[] = [
     image: '/images/paintings/2020-The_Angel_Or_The_Jester_.jpg',
     medium: 'Acrylic on canvas',
     year: '2020',
-    category:'painting'
+    category:'painting',
+    clickCount: 0
+
   }
 ]

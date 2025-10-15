@@ -11,6 +11,7 @@ export const designData: ArtPiece[] = [
     image: '/images/design/20191215_115410_2.jpg',
     medium: 'Design',
     category:'Design',
+    clickCount: 0,
 },
   
 {
@@ -19,6 +20,7 @@ export const designData: ArtPiece[] = [
     image: '/images/design/20191215_115431-3.jpg',
     medium: 'Design',
     category:'Design',
+    clickCount: 0,
 },
   
 {
@@ -27,6 +29,7 @@ export const designData: ArtPiece[] = [
     image: '/images/design/20191215_124957_.jpg',
     medium: 'Design',
     category:'Design',
+    clickCount: 0,
 },
 
 {
@@ -35,6 +38,7 @@ export const designData: ArtPiece[] = [
     image: '/images/design/20200121_111656_4.jpg',
     medium: 'Design',
     category:'Design',
+    clickCount: 0,
 },
 {
     id: 5,
@@ -42,6 +46,7 @@ export const designData: ArtPiece[] = [
     image: '/images/design/20200121_112303_2-.jpg',
     medium: 'Design',
     category:'Design',
+    clickCount: 0,
 },
   
 
