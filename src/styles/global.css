@@ -234,21 +234,12 @@ text-shadow: 0 0 10px rgba(238, 232, 170, 0.7);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
     transition: transform 0.2s;
-    width: 400px;
+    width:500px;
+    height: 450px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-
-footer {
-  display: flex;
-  justify-content:space-around;
-  text-align:center ;
-  font-size: 95%;
-  background-color: rgb(38, 28, 48);
-  box-shadow: 0 0 10px rgba(238, 232, 170, 0.9);
-  text-shadow: -1px -1px 0 #ee00dc, 1px -1px 0 #00997d, -1px -1px 0 #00bb76, -1px -2px 0 #00bb76;
-}
 
  base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
@@ -266,8 +257,9 @@ footer {
 }
 
 input {
-    width: 50%;
-    padding: 8px;
+    width: 60%;
+    height: 35px;
+    padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -279,21 +271,20 @@ input[type="checkbox"] {
     width: 10%;
 }
 select {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    box-sizing: border-box;
+   
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 6px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 label {
-    font-size: 15px;
+    font-size: 14px;
     display: block;
-    width: 100%;
-    margin-top: 8px;
-    margin-bottom: 5px;
+    width: 50%;
+    margin-top:1px;
+    margin-bottom: 1px;
     text-align: left;
     color: #555;
     font-weight: bold;
@@ -302,7 +293,20 @@ label {
 
 textarea {
     resize: none;
+    padding: 6px;
     width: 98%;
-    min-height: 100px;
-    max-height: 150px;
+    min-height: 30px;
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
+
+footer {
+  display: flex;
+  justify-content:space-around;
+  text-align:center ;
+  font-size: 95%;
+  background-color: rgb(38, 28, 48);
+  box-shadow: 0 0 10px rgba(238, 232, 170, 0.9);
+  text-shadow: -1px -1px 0 #ee00dc, 1px -1px 0 #00997d, -1px -1px 0 #00bb76, -1px -2px 0 #00bb76;
 }
