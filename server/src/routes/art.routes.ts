@@ -9,6 +9,7 @@ router.get("/", async (req, res) => {
     console.log("Fetched artwork from DB:", artworks.length);
     res.json(artworks);
   } catch (err) {
+    console.error("Error fetching artworks:", err);
     res.status(500).json({ message: "Failed to fetch artworks" });
   }
 });
@@ -20,6 +21,7 @@ router.get("/:id", async (req, res) => {
     if (!art) return res.status(404).json({ message: "Not found" });
     res.json(art);
   } catch (err) {
+    console.error("Error fetching art:", err);
     res.status(500).json({ message: "Error fetching art" });
   }
 });
@@ -34,6 +36,7 @@ router.patch("/:id/click", async (req, res) => {
     );
     res.json(art);
   } catch (err) {
+     console.error("Error updating click count:", err);
     res.status(500).json({ message: "Error updating click count" });
   }
 });
