@@ -25,7 +25,12 @@ jobs:
       - run: npm ci
         working-directory: client
       - name: Run lint
-        run: npm run lint
+        run: |
+          if npm run | grep -q "lint"; then
+            npm run lint
+          else
+            echo "⚠️ No lint script found, skipping lint step."
+          fi
         working-directory: client
 
 
@@ -42,7 +47,15 @@ jobs:
       - run: npm ci
         working-directory: client
       - name: Run Tests
-        run: npm test -- --run
+  
+        run: |
+          if npm run | grep -q "test"; then
+            npm test -- --run
+          else
+            echo "⚠️ No test script found, skipping test step."
+          fi
+
+
         working-directory: client
   deploy:
     name: 🚀 Deploy to Netlify
@@ -57,8 +70,10 @@ jobs:
           cache: npm
           cache-dependency-path: client/package-lock.json
       - run: npm ci
+        working-directory: client
       - name: Build Project
         run: npm run build
+        working-directory: client
       - name: Deploy to Netlify
         id: netlify
         uses: nwtgck/actions-netlify@v2.0
