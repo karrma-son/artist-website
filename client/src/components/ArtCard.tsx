@@ -17,7 +17,10 @@ const ArtCard: React.FC<ArtCardProps> = ({ art, onSelect, onAddToCart }) => (
     {art.size && <p>{art.size}</p>}
     {art.year && <p>{art.year}</p>}
     {art.price !== undefined && (
+      <>
+      <p>${art.price}</p>
       <button onClick={() => onAddToCart(art)}>Add to Cart</button>
+      </>
     )}
   </div>
 );

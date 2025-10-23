@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react'
 import { useCart } from '../hooks/useCart'
 import type { ArtPiece } from '../types/ArtPiece'
 import Modal from './Modal'
-import ArtCard from './ArdCard'
+import ArtCard from './ArtCard'
 import ArtModalContent from './ArtModalContent'
 
 
