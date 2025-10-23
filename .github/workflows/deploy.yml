@@ -15,31 +15,6 @@ jobs:
   lint:
     name: 🧹 Lint Code
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./client
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - run: npm ci
-      - name: Run lint
-        run: |
-          if npm run | grep -q "lint"; then
-            npm run lint
-          else
-            echo "⚠️ No lint script found, skipping lint step."
-          fi  
-
-
-  test:
-    name: ✅ Run Tests
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./client
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -48,14 +23,27 @@ jobs:
           cache: npm
           cache-dependency-path: client/package-lock.json
       - run: npm ci
-      - name: Run Tests
-        run: |
-          if npm run | grep -q "test"; then
-            npm test -- --ci --passWithNoTests
-          else
-            echo "⚠️ No test script found, skipping test step."
-          fi
+        working-directory: client
+      - name: Run lint
+        run: npm run lint
+        working-directory: client
 
+
+  test:
+    name: ✅ Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - run: npm ci
+        working-directory: client
+      - name: Run Tests
+        run: npm test -- --run
+        working-directory: client
   deploy:
     name: 🚀 Deploy to Netlify
     runs-on: ubuntu-latest
