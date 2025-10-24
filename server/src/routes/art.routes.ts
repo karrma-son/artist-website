@@ -1,5 +1,5 @@
 import express from "express";
-import Art from "../models/art.model";
+import Art from "../models/art.model.js";
 const router = express.Router();
 
 // GET all art

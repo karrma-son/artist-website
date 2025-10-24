@@ -1,9 +1,8 @@
 // server/seed.ts
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { allArtData } from "./artData";
-import ArtPiece from "../models/ArtPiece";
-
+import { allArtData } from "./artData.js";
+import ArtPiece from "../models/ArtPiece.js";
 dotenv.config();
 
 

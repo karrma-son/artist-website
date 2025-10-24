@@ -1,11 +1,11 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import artRoutes from "./routes/art";
 import mongoose from "mongoose";
+import router from "./routes/art.routes.js";
 
 
-dotenv.config();
+dotenv.config({ path: "./.env" });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -18,7 +18,7 @@ app.get("/", (_, res) => {
   res.send("API is running 🚀");
 });
 
-app.use("/api", artRoutes);
+app.use("/api", router);
 
 
 async function startServer() {

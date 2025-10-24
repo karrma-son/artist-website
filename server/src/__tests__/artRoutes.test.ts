@@ -2,12 +2,12 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import request from "supertest";
 import express from "express";
-import artRoutes from "../routes/art";
-import Art from "../models/art.model";
+import router from "../routes/art.routes.js";
+import ArtPiece from "../models/ArtPiece.js";
 
 const app = express();
 app.use(express.json());
-app.use("/api/art", artRoutes);
+app.use("/api/art", router);
 
 let mongoServer: MongoMemoryServer;
 
@@ -17,7 +17,7 @@ beforeAll(async () => {
   await mongoose.connect(uri);
 
   // seed test data
-  await Art.create({
+  await ArtPiece.create({
     title: "Test Painting",
     category: "painting",
     image: "/test.jpg",
@@ -41,7 +41,7 @@ describe("Art Routes (Mongo Memory)", () => {
   });
 
   it("PATCH /api/art/:id/click increments clickCount", async () => {
-    const art = await Art.findOne();
+    const art = await ArtPiece.findOne();
     const res = await request(app).patch(`/api/art/${art!._id}/click`);
     expect(res.status).toBe(200);
     expect(res.body.clickCount).toBe(1);

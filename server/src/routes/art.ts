@@ -1,6 +1,6 @@
 // routes/art.ts
 import { Router } from "express";
-import ArtPiece from "../models/ArtPiece";
+import ArtPiece from "../models/ArtPiece.js";
 
 const router = Router();
 
