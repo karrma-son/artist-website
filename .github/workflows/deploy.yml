@@ -2,9 +2,9 @@ name: Build, Test, and Deploy to Netlify (Parallel CI)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "new-branch-1" ]
   pull_request:
-    branches: [ "main" ]  
+    branches: [ "new-branch-1" ]  
   workflow_dispatch:
 
 permissions:
@@ -75,7 +75,7 @@ jobs:
           enable-pull-request-comment: true
           enable-commit-status: true
           production-deploy: ${{ github.event_name == 'push' }}
-          alias: ${{ github.head_ref || 'main' }}
+          alias: ${{ github.head_ref }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
