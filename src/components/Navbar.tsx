@@ -22,12 +22,33 @@ const Navbar = () => {
                   initial={{ x: 200, opacity: 0 }}
                   animate={{ x: 0, opacity: .95 }}
                   transition={{ duration: 3, ease: "easeIn" }}
-        className="hidden md:flex flex-col gap-14 text-gray-100 text-lg w-40 h-48 bg-gradient-to-bl from-slate-700 to-gray-600  border-gray-800 border-2 shadow-lg shadow-gray-950  rounded-4xl p-6 fixed right-48">
+        className="hidden md:flex flex-col gap-14 text-gray-100 text-lg w-40 h-72 bg-gradient-to-bl from-slate-700 to-gray-600  border-gray-800 border-2 shadow-lg shadow-gray-950  rounded-4xl p-6 fixed right-48">
         <ul>
         <li>
-          <Link to="/art/Paintings" className="hover:text-fuchsia-300 flex items-center gap-2">
-            <Brush size={18} /> Art
+          <Link to="/" className="hover:text-fuchsia-300 flex items-center gap-2">
+            <House size={18} /> Home
           </Link>
+        </li>
+        <li>
+          <Link to="/art/Paintings" className="hover:text-fuchsia-400 flex items-center gap-1">
+         <Brush size={18} /> Paintings 
+         </Link> 
+          
+        </li> 
+        <li>     
+          <Link to="/art/Printmaking" className="hover:text-fuchsia-400 flex items-center gap-1 ">
+          Printmaking
+         </Link> 
+        </li>    
+        <li>       
+          <Link to="/art/Illustrations" className="hover:text-fuchsia-400 flex items-center gap-1">
+           Illustrations
+         </Link> 
+        </li>
+        <li>             
+          <Link to="/art/Design" className="hover:text-fuchsia-400 flex items-center gap-1">
+          Design
+         </Link> 
         </li>
         <li>
           <Link to="/gallery" className="hover:text-fuchsia-400 flex items-center gap-1">
