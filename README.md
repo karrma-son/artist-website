@@ -1,4 +1,5 @@
 ![Mason Westbite](Mason-Website.png)
+.
 
 # React + TypeScript + Vite
 
