@@ -49,7 +49,14 @@ export const designData: ArtPiece[] = [
     clickCount: 0,
 },
   
-
+{
+    id: 6,
+    title: '',
+    image: '/images/design/20200121_112303_2-.jpg',
+    medium: 'Design',
+    category:'Design',
+    clickCount: 0,
+},
 ]
 
 
