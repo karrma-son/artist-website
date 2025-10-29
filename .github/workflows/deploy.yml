@@ -2,9 +2,9 @@ name: Build, Test, and Deploy to Netlify (Parallel CI)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "new-branch-1" ]
   pull_request:
-    branches: [ "main" ]  
+    branches: [ "new-branch-1" ]  
   workflow_dispatch:
 
 permissions:
