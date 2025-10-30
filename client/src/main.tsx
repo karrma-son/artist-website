@@ -4,6 +4,7 @@ import App from './App'
 import { CartProvider } from './context/CartProvider'
 import './styles/global.css'
 
+
 const domNode = document.getElementById('root');
 const root = createRoot((domNode)!);
 
