@@ -11,14 +11,14 @@ const DesktopNav = () => {
     <Draggable nodeRef={nodeRef}>
       <nav
         ref={nodeRef}
-        className="hidden md:flex fixed top-2 right-2 flex-col w-40 h-64 bg-gradient-to-bl from-slate-700 to-fuchsia-600 border border-gray-900 rounded-2xl p-6 shadow-xl z-50 cursor-move"
+        className="hidden md:flex fixed top-2 right-2 flex-col w-40 h-64 bg-linear-to-bl from-slate-700 to-fuchsia-600 border border-gray-900 rounded-2xl p-6 shadow-xl z-50 cursor-move"
       >
         {/* Desktop nav content */}
               <motion.div
                   initial={{ x: 200, opacity: 0 }}
                   animate={{ x: 0, opacity: .95 }}
                   transition={{ duration: 3, ease: "easeIn" }}
-        className="hidden md:flex flex-col gap-14 text-gray-100 text-lg w-40 h-48 bg-gradient-to-bl from-slate-700 to-gray-600  border-gray-800 border-2 shadow-lg shadow-gray-950  rounded-4xl p-6 fixed right-48">
+        className="hidden md:flex flex-col gap-14 text-gray-100 text-lg w-40 h-48 bg-linear-to-bl from-slate-700 to-gray-600  border-gray-800 border-2 shadow-lg shadow-gray-950  rounded-4xl p-6 fixed right-48">
         <ul>
         <li>
           <Link to="/art/Paintings" className="hover:text-fuchsia-300 flex items-center gap-2">

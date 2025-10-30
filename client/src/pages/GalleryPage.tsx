@@ -7,6 +7,7 @@ import {paintings2018, paintings2020, paintings2021, paintings2022 } from '../da
 const GalleryPage = () => {
   return (
     <div className= "">
+      <br />
       <h2>2018</h2>
       <ArtCardGrid artData={paintings2018} />
       <h2>2020</h2>

@@ -24,7 +24,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
       <Draggable nodeRef={nodeRef}>
         <div
           ref={nodeRef}
-          className="bg-gradient-to-bl from-slate-700 to-fuchsia-600 rounded-2xl p-6 w-64 shadow-xl cursor-move"
+          className="bg-linear-to-bl from-slate-700 to-fuchsia-600 rounded-2xl p-6 w-64 shadow-xl cursor-move"
           onClick={(e) => e.stopPropagation()} // stop click from closing when dragging
         >
           {/* Mobile nav content */}
@@ -47,18 +47,18 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
                 onClick={() => setArtOpen(!artOpen)}>
                
                  <Brush size={20} />  
-                <SquareChevronDown size={20} className={artOpen ? 'rotate-180 transition-transform' : ''} />
+                <SquareChevronDown size={30} className={artOpen ? 'rotate-180 transition-transform' : ''} />
               </button>
               {artOpen && (
                 <Modal isOpen={artOpen} onClose={() => setArtOpen(false)}>
                   <div className="text-xl/40 flex flex-col gap-1  ">
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl"> 
+                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl"> 
                     <Link to="/art/Paintings" className="paintings py-1 px-2 ">Paintings</Link> </button>
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
+                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
                     <Link to="/art/Printmaking" className="py-1 px-2 ">Printmaking</Link></button>
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
+                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
                     <Link to="/art/Illustrations" className="illustrations py-1 px-2 ">Illustrations</Link></button>
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
+                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
                     <Link to="/art/Design" className="design py-1 px-2 ">Design</Link></button>
                   </div>
                  </Modal>
@@ -72,7 +72,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               </Link>
             </li> 
             <li>
-              <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-2xl'> 
+              <div className= 'mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-2xl'> 
                 <button title='homebtn'
                 onClick={() => setMobileOpen(false)}> 
                 <Link to="/" className="home">
@@ -94,7 +94,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               
             </li>
             <li>
-              <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
+              <div className= 'mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
                 <button title='resumebtn'> 
                 <Link to="/resume" className="resume"
                 onClick={() => setMobileOpen(false)}> 
@@ -104,7 +104,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               </div>
             </li>
             <li>
-              <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
+              <div className= 'mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
                 <button title='cartbtn'> 
                 <Link to="/cart" className="cart flex items-center gap-1"
                 onClick={() => setMobileOpen(false)}> 

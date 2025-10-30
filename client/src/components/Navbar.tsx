@@ -20,14 +20,35 @@ const Navbar = () => {
       <motion.div
                   drag
                   initial={{ x: 200, opacity: 0 }}
-                  animate={{ x: 0, opacity: .95 }}
-                  transition={{ duration: 3, ease: "easeIn" }}
-        className="hidden md:flex flex-col gap-14 text-gray-100 text-lg w-40 h-48 bg-gradient-to-bl from-slate-700 to-gray-600  border-gray-800 border-2 shadow-lg shadow-gray-950  rounded-4xl p-6 fixed right-48">
+                  animate={{ x: 0, opacity: .98 }}
+                  transition={{ duration: 2, ease: "easeIn" }}
+        className="hidden md:flex flex-col gap-14 text-gray-100 text-lg w-40 h-72 bg-linear-to-bl from-slate-700 to-gray-600  border-gray-800 border-2 shadow-lg shadow-gray-950  rounded-4xl p-6 fixed right-48">
         <ul>
         <li>
-          <Link to="/art/Paintings" className="hover:text-fuchsia-300 flex items-center gap-2">
-            <Brush size={18} /> Art
+          <Link to="/" className="hover:text-fuchsia-300 flex items-center gap-2">
+            <House size={18} /> Home
           </Link>
+        </li>
+        <li>
+          <Link to="/art/Paintings" className="hover:text-fuchsia-400 flex items-center gap-1">
+         <Brush size={18} /> Paintings 
+         </Link> 
+
+        </li> 
+        <li>     
+          <Link to="/art/Printmaking" className="hover:text-fuchsia-400 flex items-center gap-1 ">
+          Printmaking
+         </Link> 
+        </li>    
+        <li>       
+          <Link to="/art/Illustrations" className="hover:text-fuchsia-400 flex items-center gap-1">
+           Illustrations
+         </Link> 
+        </li>
+        <li>             
+          <Link to="/art/Design" className="hover:text-fuchsia-400 flex items-center gap-1">
+          Design
+         </Link> 
         </li>
         <li>
           <Link to="/gallery" className="hover:text-fuchsia-400 flex items-center gap-1">
@@ -58,50 +79,52 @@ const Navbar = () => {
 
 <motion.div 
     drag
-    className="md:hidden bg-radial from-black to-gray-700  border-gray-800  shadow-lg shadow-gray-900 border-3 rounded-2xl flex justify-end fixed top-2 right-7 z-300">
+    className="md:hidden bg-radial from-black to-gray-700  border-gray-800  shadow-lg shadow-gray-900 border-3 rounded-4xl flex justify-end fixed top-2 right-7 z-300">
   <button onClick={() => setMobileOpen(!mobileOpen)}>
-    {mobileOpen ? <X size={28} color="#cdaaeeb3" /> : <SquareChevronDown size={48} color="#cdaaeeb3" />}
+    {mobileOpen ? <X size={28} color="#cdaaeeb3" /> : <SquareChevronDown size={60} color="#cdaaeeb3" />}
   </button>
       </motion.div>
 
 
       {mobileOpen && (
          <Modal isOpen={mobileOpen} onClose={() => setMobileOpen(false)}>
-        <div className=" flex flex-col  h-300 ml-1 justify-items-center  ">
+        <div className=" h-160 flex flex-col ml-1 justify-center justify-items-center  ">
           <ul className="text-xl/40">
             <li> 
-              <div className= ' mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-2xl'>
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'>
               <button className='' title='art-button'
                 onClick={() => setArtOpen(!artOpen)}>
-               
-                 <Brush size={20} />  
                 <SquareChevronDown size={20} className={artOpen ? 'rotate-180 transition-transform' : ''} />
               </button>
               {artOpen && (
                 <Modal isOpen={artOpen} onClose={() => setArtOpen(false)}>
-                  <div className="text-xl/40 flex flex-col gap-1  ">
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl"> 
-                    <Link to="/art/Paintings" className="paintings py-1 px-2 ">Paintings</Link> </button>
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
-                    <Link to="/art/Printmaking" className="py-1 px-2 ">Printmaking</Link></button>
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
-                    <Link to="/art/Illustrations" className="illustrations py-1 px-2 ">Illustrations</Link></button>
-                  <button className=" flex flex-col ml-1 mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl">   
-                    <Link to="/art/Design" className="design py-1 px-2 ">Design</Link></button>
+                  <div className="h-140 text-xl/40 flex flex-col justify-center gap-1 ">
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl"> 
+                    <Link to="/art/Paintings" className="paintings flex flex-col justify-center align-middle ">Paintings</Link> </button>
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl">   
+                    <Link to="/art/Printmaking" className="flex flex-col justify-center align-middle ">Printmaking</Link></button>
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl">   
+                    <Link to="/art/Illustrations" className="illustrations flex flex-col justify-center align-middle ">Illustrations</Link></button>
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl">   
+                    <Link to="/art/Design" className="design flex flex-col justify-center align-middle ">Design</Link></button>
                   </div>
                  </Modal>
               )}
             </div >
             </li>
-            <li className=  'mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'
+            <li>
+            <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'>
+            <button  className="flex flex-col justify-center align-middle" title='homebtn'
             onClick={() => setMobileOpen(false)}>
               <Link to="/gallery">
-                  <Images className='m-auto h-40' size={30} /> 
+                  <Images className=' ' size={20} /> 
               </Link>
+              </button>
+              </div>   
             </li> 
             <li>
-              <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-2xl'> 
-                <button title='homebtn'
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4  bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'> 
+                <button  className="flex flex-col justify-center align-middle" title='homebtn'
                 onClick={() => setMobileOpen(false)}> 
                 <Link to="/" className="home">
                 <House size={20} /> 
@@ -111,7 +134,7 @@ const Navbar = () => {
               
             </li>
             <li>
-              <div className= 'mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'> 
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'> 
                 <button title='biobtn'
                 onClick={() => setMobileOpen(false)}> 
                 <Link to="/bio" className="bio">
@@ -122,7 +145,7 @@ const Navbar = () => {
               
             </li>
             <li>
-              <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl'>
                 <button title='resumebtn'> 
                 <Link to="/resume" className="resume"
                 onClick={() => setMobileOpen(false)}> 
@@ -132,7 +155,7 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <div className= 'mb-4 border-4 bg-gradient-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-2xl'>
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl'>
                 <button title='cartbtn'> 
                 <Link to="/cart" className="cart flex items-center gap-1"
                 onClick={() => setMobileOpen(false)}> 

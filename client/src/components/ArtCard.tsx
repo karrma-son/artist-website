@@ -8,7 +8,7 @@ interface ArtCardProps {
 }
 
 const ArtCard: React.FC<ArtCardProps> = ({ art, onSelect, onAddToCart }) => (
-  <div className="bg-gradient-to-b from-gray-700 to-gray-900 art-card">
+  <div className="bg-linear-to-b from-gray-700 to-gray-900 art-card">
     <div onClick={() => onSelect(art)} className="cursor-pointer">
       <h3>{art.title}</h3>
       <img className="border-indigo-950" src={art.image} alt={art.title} />

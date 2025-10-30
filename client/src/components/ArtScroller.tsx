@@ -10,8 +10,8 @@ const ArtScroller = () => {
   const categories = [
     { name: "Paintings", path: "/art/paintings", image: "/images/paintings/2018-Shelter.jpg" },
     { name: "Printmaking", path: "/art/printmaking", image: "/images/printmaking/IMG_0233.JPG" },
-    { name: "Illustrations", path: "/art/illustrations", image: "/images/illustrations/20210307_141001_3-.jpg" },
-    { name: "Design", path: "/art/design", image: "/images/design/20210307_152837.jpg" },
+    { name: "Illustrations", path: "/art/illustrations", image: "/images/illustrations/20200625_154919_1.jpg" },
+    { name: "Design", path: "/art/design", image: "/images/design/mk93-2.jpg" },
   ];
 
   const scrollItems = [...categories, ...categories,...categories, ...categories,...categories, ...categories];
@@ -52,7 +52,7 @@ const ArtScroller = () => {
         {scrollItems.map((cat, i) => (
           <motion.div
             key={i}
-            className="relative min-w-[250px] h-[175px] rounded-3xl overflow-hidden shadow-2xl shadow-gray-800 border-zinc-800 border-2  cursor-pointer"
+            className="relative min-w-[450px] h-[275px] rounded-3xl overflow-hidden  shadow-gray-800 border-zinc-800 border-4  cursor-pointer"
           >
           <Link to={cat.path}>
             <img
