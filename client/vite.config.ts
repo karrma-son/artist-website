@@ -15,9 +15,9 @@ export default defineConfig({
       "/api": "http://localhost:5000"
     }
   },
-  base: './', // prevents missing CSS/JS on deploy
+  base: '/',
   build: {
-    outDir: 'dist', // keep it default inside client
+    outDir: 'dist',
   }
 })
 
