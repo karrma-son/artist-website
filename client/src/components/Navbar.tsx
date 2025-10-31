@@ -1,7 +1,7 @@
 // src/components/Navbar.tsx
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { X, ShoppingCart, SquareChevronDown, Images,  Brush, FileUser, House,  FileText } from 'lucide-react'; // npm install lucide-react
+import { X, ShoppingCart, SquareChevronDown, Images,  FileUser, House,  FileText } from 'lucide-react'; // npm install lucide-react
 import Modal from './Modal';
 import {motion} from 'framer-motion'
 // 
@@ -31,7 +31,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/art/Paintings" className="hover:text-fuchsia-400 flex items-center gap-1">
-         <Brush size={18} /> Paintings 
+          Paintings 
          </Link> 
 
         </li> 
@@ -79,33 +79,37 @@ const Navbar = () => {
 
 <motion.div 
     drag
-    className="md:hidden bg-radial from-black to-gray-700  border-gray-800  shadow-lg shadow-gray-900 border-3 rounded-4xl flex justify-end fixed top-2 right-7 z-300">
+    className="md:hidden bg-radial from-black to-gray-700  border-gray-800  shadow-lg shadow-gray-900 border-3 rounded-4xl flex justify-end fixed mt-30 ml-140  z-60">
   <button onClick={() => setMobileOpen(!mobileOpen)}>
-    {mobileOpen ? <X size={28} color="#cdaaeeb3" /> : <SquareChevronDown size={60} color="#cdaaeeb3" />}
+    {mobileOpen ? <X size={30} color="#cdaaeeb3" /> : <SquareChevronDown size={60} color="#cdaaeeb3" />}
   </button>
       </motion.div>
 
 
       {mobileOpen && (
-         <Modal isOpen={mobileOpen} onClose={() => setMobileOpen(false)}>
-        <div className=" h-160 flex flex-col ml-1 justify-center justify-items-center  ">
+         <Modal isOpen={mobileOpen} onClose={() => setMobileOpen(false)}    variant="drawer">
+        <div className=" w-[18rem]  h-[40rem] flex flex-col ml-25 mt-50  justify-center justify-items-center" >
           <ul className="text-xl/40">
             <li> 
-              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'>
-              <button className='' title='art-button'
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl mt-8'>
+              <button className='flex flex-col justify-center align-middle' title='art-button'
                 onClick={() => setArtOpen(!artOpen)}>
                 <SquareChevronDown size={20} className={artOpen ? 'rotate-180 transition-transform' : ''} />
               </button>
               {artOpen && (
-                <Modal isOpen={artOpen} onClose={() => setArtOpen(false)}>
-                  <div className="h-140 text-xl/40 flex flex-col justify-center gap-1 ">
-                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl"> 
+                <Modal isOpen={artOpen} onClose={() => setArtOpen(false)} variant="popup" >
+                  <div className="h-100 text-xl/40 flex flex-col justify-center gap-1  mt-80 ">
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl" 
+                    onClick={() => setMobileOpen(false)}>
                     <Link to="/art/Paintings" className="paintings flex flex-col justify-center align-middle ">Paintings</Link> </button>
-                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl">   
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
+                    onClick={() => setMobileOpen(false)}> 
                     <Link to="/art/Printmaking" className="flex flex-col justify-center align-middle ">Printmaking</Link></button>
-                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl">   
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
+                    onClick={() => setMobileOpen(false)}>   
                     <Link to="/art/Illustrations" className="illustrations flex flex-col justify-center align-middle ">Illustrations</Link></button>
-                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl">   
+                  <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
+                    onClick={() => setMobileOpen(false)}>   
                     <Link to="/art/Design" className="design flex flex-col justify-center align-middle ">Design</Link></button>
                   </div>
                  </Modal>
@@ -123,7 +127,7 @@ const Navbar = () => {
               </div>   
             </li> 
             <li>
-              <div className= 'flex justify-center h-24 w-48 mb-4 border-4  bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'> 
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4  bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl'> 
                 <button  className="flex flex-col justify-center align-middle" title='homebtn'
                 onClick={() => setMobileOpen(false)}> 
                 <Link to="/" className="home">
@@ -145,7 +149,7 @@ const Navbar = () => {
               
             </li>
             <li>
-              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl'>
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 bg border-t border-gray-900 rounded-4xl'>
                 <button title='resumebtn'> 
                 <Link to="/resume" className="resume"
                 onClick={() => setMobileOpen(false)}> 
@@ -155,7 +159,7 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fushia-600 bg border-t border-gray-900 rounded-4xl'>
+              <div className= 'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900  bg border-t border-gray-900 rounded-4xl'>
                 <button title='cartbtn'> 
                 <Link to="/cart" className="cart flex items-center gap-1"
                 onClick={() => setMobileOpen(false)}> 

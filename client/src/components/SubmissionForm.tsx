@@ -24,11 +24,11 @@ function SubmissionForm() {
   };
 
   return (
-    <div className=" bg-gradient-to-br from-gray-700 to-gray-950 border-gray-600 border-2 drop-shadow-lg shadow-gray-900  submissionForm">
+    <div className=" bg-linear-to-br from-gray-700 to-gray-950 border-gray-600 border-2 drop-shadow-lg shadow-gray-900  submissionForm">
       <fieldset  className="">
         <form onSubmit={handleSubmit}>
           <label className="flex" htmlFor="name">Name*</label>
-          <input className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
+          <input className="text-gray-900 bg-linear-to-t from-gray-500 to-gray-200"
             type="text"
             name="name"
             id="name"
@@ -39,7 +39,7 @@ function SubmissionForm() {
           />
 
           <label htmlFor="email">Enter Email* </label>
-          <input className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
+          <input className="text-gray-900 bg-linear-to-t from-gray-500 to-gray-200"
             type="email"
             name="email"
             id="email"
@@ -50,7 +50,7 @@ function SubmissionForm() {
           />
 
           <label htmlFor="contact">Contact*</label>
-          <input  className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
+          <input  className="text-gray-900 bg-linear-to-t from-gray-500 to-gray-200"
             type="tel"
             name="contact"
             id="contact"
@@ -61,7 +61,7 @@ function SubmissionForm() {
           />
 
           <label  htmlFor="select">Select your choice</label>
-          <select className="text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
+          <select className="text-gray-900 bg-linear-to-t from-gray-500 to-gray-200"
             name="select"
             id="select"
             value={selectedOption}
@@ -84,7 +84,7 @@ function SubmissionForm() {
           </select>
 
           <label className="justify-center text-center" htmlFor="request">Request</label>
-          <textarea className="text-center text-gray-900 bg-gradient-to-t from-gray-500 to-gray-200"
+          <textarea className="text-center text-gray-900 bg-linear-to-t from-gray-500 to-gray-200"
             name="request"
             id="request"
             cols={40}
@@ -95,10 +95,10 @@ function SubmissionForm() {
             required
           ></textarea>
           <div className="flex justify-evenly h-20 mb-8">
-          <button className="text-gray-700 bg-gradient-to-t from-gray-500 to-gray-300 border-4 border-indigo-900 rounded-4xl flex-1" type="button" onClick={handleReset}>
+          <button className="text-gray-700 bg-linear-to-t from-gray-500 to-gray-300 border-4 border-indigo-900 rounded-4xl flex-1" type="button" onClick={handleReset}>
             Reset
           </button>
-          <button className="text-gray-700 bg-gradient-to-t from-gray-500 to-gray-300 border-4 border-indigo-900 rounded-4xl flex-1 " type="submit">Submit</button>
+          <button className="text-gray-700 bg-linear-to-t from-gray-500 to-gray-300 border-4 border-indigo-900 rounded-4xl flex-1 " type="submit">Submit</button>
           </div>  
         </form>
       </fieldset>
