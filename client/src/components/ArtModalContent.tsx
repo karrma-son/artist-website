@@ -12,6 +12,7 @@ const ArtModalContent: React.FC<ArtModalContentProps> = ({ art, onAddToCart }) =
     <img
       src={art.image}
       alt={art.title}
+      loading="lazy"
       onClick={() => console.log(`[ArtCardGrid] Image clicked with id: ${art.id}`)}
       className="max-h-[70vh] mx-auto rounded-lg"
     />

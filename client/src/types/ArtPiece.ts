@@ -1,4 +1,3 @@
-// src/types/ArtPiece.ts
 export type ArtPiece = {
   id: number;
   title: string;
@@ -10,5 +9,5 @@ export type ArtPiece = {
   category: string;
   description?: string;
   clickCount: number;
-
+  loading?: 'lazy' | 'eager';
 };

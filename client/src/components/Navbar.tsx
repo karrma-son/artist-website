@@ -46,8 +46,8 @@ const Navbar = () => {
          </Link> 
         </li>
         <li>             
-          <Link to="/art/Design" className="hover:text-fuchsia-400 flex items-center gap-1">
-          Design
+          <Link to="/art/Digital" className="hover:text-fuchsia-400 flex items-center gap-1">
+          Digital Art
          </Link> 
         </li>
         <li>
@@ -107,10 +107,10 @@ const Navbar = () => {
                     <Link to="/art/Printmaking" className="flex flex-col justify-center align-middle ">Printmaking</Link></button>
                   <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
                     onClick={() => setMobileOpen(false)}>   
-                    <Link to="/art/Illustrations" className="illustrations flex flex-col justify-center align-middle ">Illustrations</Link></button>
+                    <Link to="/art/Illustrations" className="illustrations flex flex-col justify-center align-middle ">Drawings</Link></button>
                   <button className=" flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
                     onClick={() => setMobileOpen(false)}>   
-                    <Link to="/art/Design" className="design flex flex-col justify-center align-middle ">Design</Link></button>
+                    <Link to="/art/Digital" className=" flex flex-col justify-center align-middle ">Digital Art</Link></button>
                   </div>
                  </Modal>
               )}

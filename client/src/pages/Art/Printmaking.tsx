@@ -4,7 +4,7 @@ import { printData } from "../../data/printmaking/2011-2015"
 export default function PaintingsPage() {
   return (
     <div>
-      <h1 className= "text-center">  Paintings</h1>
+      <h1 >  Paintings</h1>
       <ArtCardGrid artData={printData} />
     </div>
   )

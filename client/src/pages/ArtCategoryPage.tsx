@@ -1,7 +1,6 @@
-// src/pages/ArtCategoryPage.tsx
 import { useParams } from 'react-router-dom';
 import ArtCardGrid from '../components/ArtCardGrid';
-import {allArtData} from '../data/artData'; // Your art list source
+import {allArtData} from '../data/artData';
 import type { ArtPiece } from '../types/ArtPiece';
 
 const ArtCategoryPage = () => {

@@ -1,16 +1,16 @@
 
-import designData from "../../data/design/designData"
+import { digitalArtData } from "../../data"
 import ArtCardGrid from "../../components/ArtCardGrid"
 
 
 
 
 
-export default function DesignPage() {
+export default function DigitalArtPage() {
   return (
     <div>
-      <h1>Design</h1>
-      <ArtCardGrid artData={designData} />
+      <h1>Digital Art</h1>
+      <ArtCardGrid artData={digitalArtData} />
     </div>
   )
 }/*
