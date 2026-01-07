@@ -3,9 +3,6 @@ import ArtScroller from '../components/ArtScroller'
 import SubmissionForm from '../components/SubmissionForm'
 import { motion } from 'framer-motion'
 
-
-
-export default function  Home(HomeProps) {
   type HomeProps = {
   artistName: string;
   introText?: string;
@@ -13,6 +10,9 @@ export default function  Home(HomeProps) {
   outroWorks?: string;
   highlightMessage?: string;
 }
+
+export default function  Home(props:HomeProps) {
+
   return (
     <div className='flex flex-wrap justify-center items-center z-0' >
       <br />
@@ -25,7 +25,7 @@ export default function  Home(HomeProps) {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 2.5, ease:"circIn" }}
         viewport={{ once: true }}>
-        <h3>{HomeProps.highlightMessage}</h3>
+        <h3>{props.highlightMessage}</h3>
       </motion.div>
       <motion.h2
         initial={{ y:150, opacity: 0 }}
@@ -34,7 +34,7 @@ export default function  Home(HomeProps) {
         transition={{ duration: 2.5 , ease: "circIn" }}
         viewport={{ once: true }}
         className="text-9xl mt-8">
-        {HomeProps.artistName}
+        {props.artistName}
       </motion.h2>
       <br />
       <ArtScroller></ArtScroller>
@@ -45,16 +45,15 @@ export default function  Home(HomeProps) {
         transition={{ duration: 1.5, ease: "easeOut" }}
         viewport={{ once: true }}
         className="md:text-4xl mt-8 ">
-        {HomeProps.introText}
+        {props.introText}
       </motion.p>
       <motion.p
         initial={{ x: -200, opacity: 0 }}
         whileInView={{ x: 0, opacity: .4 }}
-
         transition={{ duration: 2, ease: "easeIn" }}
         viewport={{ once: true }}
         className="md:text-9xl mt-8 sm:text-5xl mt-8">
-        {HomeProps.introWorks}
+        {props.introWorks}
       </motion.p>
       <motion.p
         initial={{ x: -200, opacity: 0 }}
@@ -62,7 +61,7 @@ export default function  Home(HomeProps) {
         transition={{ duration: 2, ease:"easeOut"}}
         viewport={{ once: true }}
         className="md:text-9xl mt-8 sm:text-5xl">
-        {HomeProps.outroWorks}
+        {props.outroWorks}
       </motion.p>
       <SubmissionForm></SubmissionForm>
     </div>
