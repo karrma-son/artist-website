@@ -3,50 +3,67 @@ import ArtScroller from '../components/ArtScroller'
 import SubmissionForm from '../components/SubmissionForm'
 import { motion } from 'framer-motion'
 
-type HomeProps = {
-  artistName: string
-  introText?: string
-  highlightMessage?: string
-}
 
-export default function  Home({
-  artistName,
-  introText = "Explore original works of art — painting, design, illustration, and more.",
-  highlightMessage = "Welcome to the online gallery of",
-}: HomeProps) {
+
+export default function  Home(HomeProps) {
+  type HomeProps = {
+  artistName: string;
+  introText?: string;
+  introWorks?: string;
+  outroWorks?: string;
+  highlightMessage?: string;
+}
   return (
-    <div className='flex flex-wrap justify-center items-center ' >
+    <div className='flex flex-wrap justify-center items-center z-0' >
       <br />
       <div>
-        <br />
-        <br />
-        <motion.div
-          initial={{ x: -200, opacity: 0 }}
-          whileInView={{x: 0, opacity: 1 }}
-          transition={{ duration: 2, ease: "easeIn" }}
-          viewport={{ once: true }}>
-        <h3>{highlightMessage}</h3>
-        </motion.div>
-
-        
-        <motion.h2
-          initial={{ z: 200, opacity: 0 }}
-          whileInView={{ z: 0, opacity: 1 }}
-          transition={{ duration: 3, ease: "easeIn" }}
-          viewport={{ once: true }}
-          className="text-lg mt-8">
-          {artistName}
-        </motion.h2>
-     <br />
+      <br />
+      <br />
+      <motion.div
+        initial={{y: -90, opacity: 0 }}
+        animate={{y:-90, opacity:.5}}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 2.5, ease:"circIn" }}
+        viewport={{ once: true }}>
+        <h3>{HomeProps.highlightMessage}</h3>
+      </motion.div>
+      <motion.h2
+        initial={{ y:150, opacity: 0 }}
+        animate={{y:50, opacity:.3}}
+        whileInView={{y: 0, opacity: .9 }}
+        transition={{ duration: 2.5 , ease: "circIn" }}
+        viewport={{ once: true }}
+        className="text-9xl mt-8">
+        {HomeProps.artistName}
+      </motion.h2>
+      <br />
       <ArtScroller></ArtScroller>
-       <motion.p
-          initial={{ x: 200, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 3, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-lg mt-8">
-          {introText}
-        </motion.p>
+      <motion.p
+        initial={{ x: 200, opacity: 0 }}
+        animate={{ x:50, opacity:.5}}
+        whileInView={{ x: 0, opacity: .5 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="md:text-4xl mt-8 ">
+        {HomeProps.introText}
+      </motion.p>
+      <motion.p
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: .4 }}
+
+        transition={{ duration: 2, ease: "easeIn" }}
+        viewport={{ once: true }}
+        className="md:text-9xl mt-8 sm:text-5xl mt-8">
+        {HomeProps.introWorks}
+      </motion.p>
+      <motion.p
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: .4 }}
+        transition={{ duration: 2, ease:"easeOut"}}
+        viewport={{ once: true }}
+        className="md:text-9xl mt-8 sm:text-5xl">
+        {HomeProps.outroWorks}
+      </motion.p>
       <SubmissionForm></SubmissionForm>
     </div>
     </div>

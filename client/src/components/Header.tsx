@@ -9,9 +9,10 @@ export default function Header() {
   return (
     
     <motion.header  
-      initial={{ x: 200, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 2, ease: "circOut" }}    
+      initial={{ y: -200, opacity: 0 }}
+      animate={{ y: -100, opacity: .8 }}
+      whileInView={{y: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "circOut" }}    
       className="header1 flex:auto justify-center " >
             <Link to="/">
                 <VideoPlayer
@@ -21,7 +22,7 @@ export default function Header() {
                 loop
                 muted
                 controls={false}
-                className=" img rounded-full  border-2 border-gray-900 bm-auto mx-auto z-50"
+                className=" img rounded-full  border-6 border-gray-900 bm-auto mx-auto z-30"
                 
                 />
                 </Link>

@@ -8,6 +8,8 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import ArtCategoryPage from './pages/ArtCategoryPage'
 
+
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -19,7 +21,9 @@ const App: React.FC = () => {
           <Home
           artistName="Mason Karr"
           highlightMessage="Welcome to the online gallery of"
-          introText="Browse original works — painting, serigraphy, and digital design."
+          introText="Browse original works of "
+          introWorks='painting, printmaking,'
+          outroWorks= 'and design.'
           />
         } 
       />
@@ -29,6 +33,8 @@ const App: React.FC = () => {
           <Route path="/bio" element={<BioPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/cart" element={<CartPage />} />
+
+
         </Routes>
       </Layout>
     </Router>

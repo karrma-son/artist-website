@@ -24,7 +24,7 @@ function SubmissionForm() {
   };
 
   return (
-    <div className=" bg-linear-to-br from-gray-700 to-gray-950 border-gray-600 border-2 drop-shadow-lg shadow-gray-900  submissionForm">
+    <div className=" bg-linear-to-br from-gray-700 to-gray-950 border-gray-600 border-2 drop-shadow-lg shadow-gray-900  z-0 submissionForm">
       <fieldset  className="">
         <form onSubmit={handleSubmit}>
           <label className="flex" htmlFor="name">Name*</label>

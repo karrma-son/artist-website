@@ -33,14 +33,14 @@ const ArtScroller = () => {
   };
 
   return (
-    <div className="overflow-hidden w-full">
+    <div className="md:overflow-hidden w-full md:sm overflow-auto ">
       <motion.div
       
         ref={containerRef}
         className="flex w-dvw gap-12"
         animate={controls}
           drag="x"
-        dragConstraints={{ left: -500, right: 0 }} 
+        dragConstraints={{ left: -500, right: 500 }} 
         dragElastic={0.2} 
         onUpdate={(latest) => {
           xRef.current = latest.x as number;

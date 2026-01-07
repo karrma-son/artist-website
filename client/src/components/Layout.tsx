@@ -21,7 +21,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <main>{children}</main>
             <br />
               <motion.h1
-                initial={{ z: 200, opacity: 0 }}
+                initial={{ z: 100, opacity: 0 }}
                   animate={{ z: 0, opacity: .9 }}
                     transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
                     className= "flex m-auto w-12 h-12 rounded-sm border-4 border-solid justify-center bg-radial from-indigo-900 to-purple-400 z-0"> 
