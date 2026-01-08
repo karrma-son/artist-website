@@ -11,8 +11,13 @@ import { motion } from 'framer-motion'
   highlightMessage?: string;
 }
 
-export default function  Home(props:HomeProps) {
-
+export default function  Home({
+  artistName,
+  introText,
+  introWorks,
+  outroWorks,
+  highlightMessage,
+}:HomeProps) {
   return (
     <div className='flex flex-wrap justify-center items-center z-0' >
       <br />
@@ -22,10 +27,10 @@ export default function  Home(props:HomeProps) {
       <motion.div
         initial={{y: -90, opacity: 0 }}
         animate={{y:-90, opacity:.5}}
-        whileInView={{ y: 0, opacity: 1 }}
+        whileInView={{ y: 0, opacity: .4 }}
         transition={{ duration: 2.5, ease:"circIn" }}
         viewport={{ once: true }}>
-        <h3>{props.highlightMessage}</h3>
+        <h3>{highlightMessage}</h3>
       </motion.div>
       <motion.h2
         initial={{ y:150, opacity: 0 }}
@@ -34,7 +39,7 @@ export default function  Home(props:HomeProps) {
         transition={{ duration: 2.5 , ease: "circIn" }}
         viewport={{ once: true }}
         className="text-9xl mt-8">
-        {props.artistName}
+        {artistName}
       </motion.h2>
       <br />
       <ArtScroller></ArtScroller>
@@ -45,7 +50,7 @@ export default function  Home(props:HomeProps) {
         transition={{ duration: 1.5, ease: "easeOut" }}
         viewport={{ once: true }}
         className="md:text-4xl mt-8 ">
-        {props.introText}
+        {introText}
       </motion.p>
       <motion.p
         initial={{ x: -200, opacity: 0 }}
@@ -53,7 +58,7 @@ export default function  Home(props:HomeProps) {
         transition={{ duration: 2, ease: "easeIn" }}
         viewport={{ once: true }}
         className="md:text-9xl mt-8 sm:text-5xl mt-8">
-        {props.introWorks}
+        {introWorks}
       </motion.p>
       <motion.p
         initial={{ x: -200, opacity: 0 }}
@@ -61,7 +66,7 @@ export default function  Home(props:HomeProps) {
         transition={{ duration: 2, ease:"easeOut"}}
         viewport={{ once: true }}
         className="md:text-9xl mt-8 sm:text-5xl">
-        {props.outroWorks}
+        {outroWorks}
       </motion.p>
       <SubmissionForm></SubmissionForm>
     </div>

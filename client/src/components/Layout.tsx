@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="bg-linear-to-bl from from-gray-900 via-purple-900 to-indigo-900 ..." >
+    <div className="bg-linear-to-b from from-zinc-950 via-purple-950 to-stone-950 ..." >
       <header className='bg-[url(/pattern2.jpg)] bg-center bg-blend-luminosity flex justify-between content-center'> 
          <Header></Header>
       </header>
@@ -17,21 +17,21 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
      <MotionNav>
         <Navbar />
       </MotionNav>
-
-          <main>{children}</main>
-            <br />
-              <motion.h1
-                initial={{ z: 100, opacity: 0 }}
-                  animate={{ z: 0, opacity: .9 }}
-                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
-                    className= "flex m-auto w-12 h-12 rounded-sm border-4 border-solid justify-center bg-radial from-indigo-900 to-purple-400 z-0"> 
-                  <Link to="/bio">
-                  Mason Karr
-                  </Link>
-              </motion.h1>
-  
-            <br />
-              <Footer></Footer>  
+          <main>
+            {children}
+          </main>
+          <br />
+          <motion.h1
+            initial={{ z: 100, opacity: 0 }}
+            animate={{ z: 0, opacity: .9 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
+            className= "flex m-auto w-12 h-12 rounded-sm border-4 border-solid justify-center bg-radial from-indigo-900 to-purple-400 z-0"> 
+              <Link to="/bio">
+                Mason Karr
+              </Link>
+          </motion.h1>
+          <br />
+          <Footer></Footer>  
     </div>
   )
       
