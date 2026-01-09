@@ -9,7 +9,7 @@ const CartModal: React.FC = () => {
     <Modal isOpen={cart.length > 0} onClose={() => {}}>
       <h2 className="text-xl font-semibold mb-4">Your Cart</h2>
       {cart.map((item) => (
-        <div key={item.id} className="flex justify-between mb-2">
+        <div key={item.id} className="flex justify-between mb-6">
           <span>{item.title}</span>
           <button onClick={() => removeFromCart(item.id)}>Remove</button>
         </div>

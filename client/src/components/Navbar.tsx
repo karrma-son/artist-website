@@ -23,7 +23,7 @@ return (
       z: 240
       }}
     transition = {{ duration: 0.6, ease: "easeOut" }}
-    className = "hidden md:flex pointer-events-auto overflow-x-auto whitespace-nowrap bg-linear-to-r from-gray-800/90 to-slate-700/90 backdrop-blur-md border-b border-gray-900 shadow-lg justify-center z-100">
+    className = "hidden xl:flex pointer-events-auto overflow-x-auto whitespace-nowrap bg-linear-to-r from-gray-800/90 to-slate-500/90 backdrop-blur-md border-b border-gray-900 shadow-lg justify-center z-100">
     <motion.ul onClick = {(e) => console.log("Clicked element:", e.target)}
       className = "flex gap-8 px-6 py-6 text-gray-100 text-2xl z-40 lg:text-4xl">
       <motion.li
@@ -88,7 +88,7 @@ return (
       <Link 
         to = "/art/Digital" 
         className = "hover:text-fuchsia-400 flex items-center gap-1">
-        Digital Art
+        Design/Digital
       </Link> 
       </motion.li>
       <motion.li
@@ -154,7 +154,7 @@ return (
       bottom: 50,
     }}
     dragElastic={.6}
-    className = "md:hidden bg-radial from-black to-gray-700 border-gray-800 shadow-lg shadow-gray-900 border-3 rounded-4xl flex justify-end fixed mt-30 ml-150 z-40">
+    className = "xl:hidden bg-radial from-black to-gray-700 border-gray-800 shadow-lg shadow-gray-900 border-4 rounded-4xl flex justify-end fixed right-10 z-70">
     <button onClick = {() => setMobileOpen(!mobileOpen)}>
       {mobileOpen ? 
       <X size = {30} color = "#cdaaeeb3" /> : 
@@ -165,11 +165,11 @@ return (
 
   {mobileOpen && (
     <Modal isOpen  =  {mobileOpen} onClose  =  {() => setMobileOpen(false)}    
-      variant = "drawer" className = 'rounded-lg'>
-      <div className = " w-[20rem]  h-[40rem] flex flex-col ml-30 mb-10 mt-180 justify-center justify-items-center" >
-        <motion.ul className = "text-xl/40">
+      variant = "drawer" className = 'w-160 rounded-lg'>
+      <div className = "flex flex-col mb-10 mt-180 justify-center justify-items-center" >
+        <motion.ul className = "m-auto text-xl/40">
           <motion.li> 
-            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl mt-8'>
+            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-500  bg border-t border-gray-900 rounded-4xl mt-8'>
               <button className = 'flex flex-col justify-center align-middle' title = 'art-button'
                 onClick = {() => setArtOpen(!artOpen)}>
                 <SquareChevronDown size = {20} className = {artOpen ? 'rotate-180 transition-transform' : ''} />
@@ -178,36 +178,30 @@ return (
               {artOpen && (
                 <Modal isOpen = {artOpen} onClose = {() => setArtOpen(false)} variant = "popup" >
                   <div className = "h-168 text-xl/40 flex flex-col justify-center gap-1  mt-130 ">
-                    <button className = " flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl" 
+                    <button className = " flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-500  bg border-t border-gray-900 rounded-4xl" 
                      onClick = {() => setMobileOpen(false)}>
                       <Link to = "/art/Paintings" 
                         className = "hover:text-fuchsia-300 flex flex-col justify-center align-middle" title ='paintingbtn'> 
                         Paintings
                       </Link> 
                     </button>
-                    <button className = "hover:text-fuchsia-300 flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
+                    <button className = "hover:text-fuchsia-300 flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-500  bg border-t border-gray-900 rounded-4xl"
                       onClick = {() => setMobileOpen(false)}> 
                       <Link to = "/art/Printmaking" className = "flex flex-col justify-center align-middle" title ='paintingbtn'>
                         Printmaking
                       </Link>
                     </button>
-                    <button className = "hover:text-fuchsia-300 flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
+                    <button className = "hover:text-fuchsia-300 flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-500  bg border-t border-gray-900 rounded-4xl"
                       onClick = {() => setMobileOpen(false)}>   
                       <Link to = "/art/Illustrations" className = "illustrations flex flex-col justify-center align-middle ">
                         Drawings
                       </Link>
                     </button>
-                    <button className = "hover:text-fuchsia-300 flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl"
+                    <button className = "hover:text-fuchsia-300 flex justify-center h-24 w-48 ml-1 mb-4 border-4 bg-linear-to-bl from-slate-500  bg border-t border-gray-900 rounded-4xl"
                       onClick = {() => setMobileOpen(false)}>   
                       <Link to = "/art/Digital" className = " flex flex-col justify-center align-middle ">
                         Design
                       </Link>
-                    </button>
-                    <button className = "hover:text-fuchsia-300 flex justify-center align-middle "
-                      onClick = {() => setArtOpen(!artOpen)} >
-                      {mobileOpen ? 
-                      <X size = {32} color = "#cdaaeeb3" /> : 
-                      <SquareChevronDown size = {60} color = "#cdaaeeb3" />}
                     </button>
                   </div>
                 </Modal>
@@ -216,7 +210,7 @@ return (
           </motion.li>
 
           <motion.li>
-            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'>
+            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-500 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'>
               <button  className = "flex flex-col justify-center align-middle" title ='gallerybtn'
                 onClick = {() => setMobileOpen(false)}>
                 <Link to = "/gallery">
@@ -227,7 +221,7 @@ return (
           </motion.li> 
 
           <motion.li>
-            <div className =  'flex justify-center h-24 w-48 mb-4 border-4  bg-linear-to-bl from-slate-700  bg border-t border-gray-900 rounded-4xl'> 
+            <div className =  'flex justify-center h-24 w-48 mb-4 border-4  bg-linear-to-bl from-slate-500  bg border-t border-gray-900 rounded-4xl'> 
               <button  className = "flex flex-col justify-center align-middle" title = 'homebtn'
                 onClick = {() => setMobileOpen(false)}> 
                 <Link to = "/" className = "home">
@@ -239,7 +233,7 @@ return (
           </motion.li>
 
           <motion.li>
-            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'> 
+            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-500 to-fuchsia-900 bg border-t border-gray-900 rounded-4xl'> 
               <button title = 'biobtn'
                 onClick = {() => setMobileOpen(false)}> 
                 <Link to = "/bio" className = "bio">
@@ -250,7 +244,7 @@ return (
             
           </motion.li>
           <motion.li>
-            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 bg border-t border-gray-900 rounded-4xl'>
+            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-500 bg border-t border-gray-900 rounded-4xl'>
               <button title = 'resumebtn'> 
                 <Link to = "/resume" className = "resume"
                   onClick = {() => setMobileOpen(false)}> 
@@ -261,7 +255,7 @@ return (
           </motion.li>
           
           <motion.li>
-            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-700 to-fuchsia-900  bg border-t border-gray-900 rounded-4xl'>
+            <div className =  'flex justify-center h-24 w-48 mb-4 border-4 bg-linear-to-bl from-slate-500 to-fuchsia-900  bg border-t border-gray-900 rounded-4xl'>
               <button title = 'cartbtn'> 
               <Link to = "/cart" className = "cart flex items-center gap-1"
               onClick = {() => setMobileOpen(false)}> 

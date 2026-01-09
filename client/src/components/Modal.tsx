@@ -48,7 +48,7 @@ const Modal: React.FC<ModalProps> = ({
         transition={{ duration: 0.7 }}
          className={`relative z-50 ${
               variant === "drawer"
-                ? "fixed top-0 right-0 sm:w-1/2 bg-linear-to-bl from-slate-700 to-gray-900 rounded-l-3xl p-6"
+                ? "fixed top-0 right-0 sm:w-1/2 bg-linear-to-b from-slate-700 to-gray-900 rounded-l-3xl p-6"
                 : "mx-auto mt-6 bg-linear-to-b from-gray-800 to-gray-950 rounded-2xl shadow-xl p-6 max-w-4xl"
             } ${className}`}
         onClick={(e) => e.stopPropagation()} 
@@ -57,7 +57,7 @@ const Modal: React.FC<ModalProps> = ({
               type="button"
               title="close-btn"
               onClick={onClose}
-              className="absolute top-3 right-3 text-gray-400 hover:text-white"
+              className="absolute bottom-5 right-15 text-gray-400  bg-radial from-black to-gray-700 border-gray-800 shadow-lg shadow-gray-900 border-4 rounded-4xl hover:text-white"
             >
               <X size={24} />
         </button>

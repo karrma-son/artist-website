@@ -9,6 +9,7 @@ import { motion } from 'framer-motion'
   introWorks?: string;
   outroWorks?: string;
   highlightMessage?: string;
+  welcomeMessage?: string;
 }
 
 export default function  Home({
@@ -17,19 +18,30 @@ export default function  Home({
   introWorks,
   outroWorks,
   highlightMessage,
+  welcomeMessage,
 }:HomeProps) {
   return (
     <div className='flex flex-wrap justify-center items-center z-0' >
       <br />
       <div>
       <br />
+      <motion.div
+        initial={{y: -90, opacity: 0 }}
+        animate={{y:-90, opacity:.5}}
+        whileInView={{ y: 0, opacity: .4 }}
+        transition={{ duration: 2.5, ease:"circIn" }}
+        viewport={{ once: true }}
+        className="lg:text-4xl mt-4 sm:text-9xl mt-3">
+        {welcomeMessage}
+      </motion.div>
       <br />
       <motion.div
         initial={{y: -90, opacity: 0 }}
         animate={{y:-90, opacity:.5}}
         whileInView={{ y: 0, opacity: .4 }}
         transition={{ duration: 2.5, ease:"circIn" }}
-        viewport={{ once: true }}>
+        viewport={{ once: true }}
+        className="md:text-9xl mt-2 sm:text-4x mt-2">
         <h3>{highlightMessage}</h3>
       </motion.div>
       <motion.h2

@@ -20,7 +20,8 @@ const App: React.FC = () => {
           element={
           <Home
           artistName="Mason Karr"
-          highlightMessage="Welcome to the online gallery of"
+          welcomeMessage='Welcome'
+          highlightMessage="to the gallery of"
           introText="Browse original works of "
           introWorks='painting, printmaking,'
           outroWorks= 'and design.'
