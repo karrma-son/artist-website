@@ -8,7 +8,7 @@ const ArtCategoryPage = () => {
 
  const filteredData: ArtPiece[] = category
     ? allArtData.filter(
-        art => art.category.toUpperCase() === category.toUpperCase()
+        (art)=> art.category?.toUpperCase() === category.toUpperCase()
       )
     : allArtData;
 
