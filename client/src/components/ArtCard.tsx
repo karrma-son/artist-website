@@ -6,8 +6,8 @@ import type { ArtPiece } from '../types/ArtPiece';
 const MotionImage = motion.img
 interface ArtCardProps {
   art: ArtPiece;
-  onSelect: (art: ArtPiece) => void;
-  onAddToCart: (art: ArtPiece) => void;
+  onSelect?: (art: ArtPiece) => void;
+  onAddToCart?: (art: ArtPiece) => void;
   linkMode?: boolean
 }
 
