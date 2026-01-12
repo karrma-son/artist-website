@@ -6,15 +6,12 @@ import Modal from './Modal'
 import ArtCard from './ArtCard'
 import ArtModalContent from './ArtModalContent'
 
-
-
-
-
 type ArtCardGridProps = {
   artData: ArtPiece[]
+  linkMode?: boolean
 }
 
-const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData }) => {
+const ArtCardGrid: React.FC<ArtCardGridProps> = ({ artData, linkMode }) => {
 const { addToCart } = useCart()
 const [selectedArt, setSelectedArt] = useState<ArtPiece | null>(null)
 
@@ -53,14 +50,18 @@ useEffect(() => {
         <ArtCard
           key={art.id}
           art={art}
-          onSelect={(art) => {
-          handleImageClick(art.id);
-          setSelectedArt(art);
+          linkMode={linkMode}
+          onSelect={
+            linkMode
+            ? undefined
+            : (art) => {
+            handleImageClick(art.id);
+            setSelectedArt(art);
          }}
           onAddToCart={addToCart}
         />
       ))}
-
+{!linkMode && (
       <Modal isOpen={!!selectedArt} onClose={() => setSelectedArt(null)}>
         {selectedArt && (
           <ArtModalContent 
@@ -70,6 +71,7 @@ useEffect(() => {
            />
         )}
       </Modal>
+    )}
     </section>
   )
 }

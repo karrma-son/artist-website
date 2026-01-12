@@ -1,13 +1,14 @@
 export type ArtPiece = {
   id: number;
-  title: string;
+  title?: string;
   image: string;
+  path?: string;
   size?:string;
   price?: number;
   year?: string ;
-  medium: string;
-  category: string;
+  medium?: string;
+  category?: string;
   description?: string;
-  clickCount: number;
+  clickCount?: number;
   loading?: 'lazy' | 'eager';
 };

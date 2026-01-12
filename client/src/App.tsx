@@ -7,6 +7,10 @@ import CartPage from './pages/CartPage'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import ArtCategoryPage from './pages/ArtCategoryPage'
+import ExamplePage from './pages/Work/WorkExamples'
+import PrintedPage from './pages/Work/PrintedPage'
+import PillowPage from './pages/Work/PillowPage'
+// import WorkCategoryPage from './pages/WorkCategoryPage'
 
 
 
@@ -34,8 +38,10 @@ const App: React.FC = () => {
           <Route path="/bio" element={<BioPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/cart" element={<CartPage />} />
-
-
+          <Route path="/workexamples" element={<ExamplePage />} />
+           <Route path = "/printed" element={<PrintedPage/>} />
+          <Route path = "/pillows" element={<PillowPage/>} />
+          {/* <Route path = "/workexamples/:category" element={<WorkCategoryPage />} /> */}
         </Routes>
       </Layout>
     </Router>
