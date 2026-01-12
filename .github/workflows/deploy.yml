@@ -78,11 +78,14 @@ jobs:
         run: npm ci
       - name: Build Project
         run: npm run build
+      - name: List dist folder
+        run: ls -la dist 
+        
       - name: Deploy to Netlify
         id: netlify
         uses: nwtgck/actions-netlify@v2.0
         with:
-          publish-dir: dist
+          publish-dir: client/dist
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: |
             GitHub Actions deploy - ${{ github.event.head_commit.message }}
