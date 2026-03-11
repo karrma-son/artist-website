@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import router from "./routes/art.routes.js";
+import router from "./routes/art.routes.ts";
 
 
 dotenv.config({ path: "./.env" });
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (_, res) => {
-  res.send("API is running 🚀");
+  res.send("Mason's Art API");
 });
 
 app.use("/api", router);

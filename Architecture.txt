@@ -1,0 +1,63 @@
+CURRENT
+React (Vite) frontend - Netlify
+Express API - local machine
+MongoDB - Atlas
+Images - local
+
+Phase 1
+React - Netlify
+API - Render
+MongoDB - Atlas
+Images - local
+
+Phase 2
+React - Netlify
+API - Render
+Images - S3
+MongoDB - Atlas
+
+Phase 3
+React - S3 + CloudFront
+API - Lambda / EC2
+Images - S3
+MongoDB - Atlas
+Domain - Route53
+
+NEW
+User
+    │
+CloudFront CDN
+    │
+React (S3 static hosting)
+    │
+React App
+    │
+API Gateway
+    │
+Express API (Lambda or EC2)
+    │
+MongoDB Atlas
+
+Deployment
+GitHub Actions
+    │
+Build Vite
+    │
+Upload dist - S3 static site bucket
+    │
+Invalidate CloudFront cache
+
+Image Service 
+Original Image Upload
+    │
+S3 image bucket
+    │
+Image Service Project
+    │
+Generate thumb / large / full
+    │
+S3 processed-images bucket
+    │
+Insert metadata into MongoDB
+
+Terraform infrastructure?
